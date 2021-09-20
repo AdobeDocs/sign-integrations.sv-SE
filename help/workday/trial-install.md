@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
+source-git-commit: 78d6cafa720b41bd638c2ef723b2d4a2def19cd5
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 39%
@@ -163,6 +163,6 @@ Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för att be o
 
 * [Lägg till Adobe-texttaggar i dokument](https://adobe.com/go/adobesign_text_tag_guide)
 
-* [Granska dokumentkonfiguration och exempel](https://www.adobe.com/go/adobesign_workday_quick_start)
+* [Granska dokumentkonfiguration och exempel](https://www.adobe.com//go/adobesign_workday_quick_start)
 
 [**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)

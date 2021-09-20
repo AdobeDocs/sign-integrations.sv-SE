@@ -12,7 +12,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
-source-git-commit: ba5e0fccfdb7cd278cc0ae57dc03da1e17b51577
+source-git-commit: 78d6cafa720b41bd638c2ef723b2d4a2def19cd5
 workflow-type: tm+mt
 source-wordcount: '1133'
 ht-degree: 25%
@@ -170,7 +170,7 @@ Adobe Sign är integreringspartnern och ska kontaktas om integreringen inte kan 
 Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för att be om hjälp. Det går även att ringa till Adobes tekniska support på 1-866-318-4100, vänta på produktlistan och sedan ange 4 sedan ange 2 (enligt anvisningarna).
 
 * [Lägga till texttaggar i Adobe i dokument](https://adobe.com/go/adobesign_text_tag_guide)
-* [Granska dokumentkonfiguration och exempel](https://www.adobe.com/go/adobesign_workday_quick_start)
+* [Granska dokumentkonfiguration och exempel](https://www.adobe.com//go/adobesign_workday_quick_start)
 
 ## Vanliga frågor {#faq}
 
