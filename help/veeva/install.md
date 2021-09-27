@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
+source-git-commit: 2a8cd053744fdd5dbb4b97a861e7d29e0722779f
 workflow-type: tm+mt
-source-wordcount: '3043'
+source-wordcount: '3039'
 ht-degree: 2%
 
 ---
@@ -285,7 +285,7 @@ När livscykeln är korrekt konfigurerad bör systemet se till att Adobe Sign Ad
 
 En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Sign med hjälp av mellanvara:
 
-1. [Gå till Adobe Sign  [!DNL Veeva Vault] for Home-sidan](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
+1. Gå till startsidan för [!DNL Veeva Vault] Adobe Sign.
 1. Välj **[!UICONTROL Logga in]** i det övre högra hörnet.
 
    ![Bild på inloggning med mellanvara](images/middleware_login.png)
