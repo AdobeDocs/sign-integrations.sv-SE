@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '3061'
+source-wordcount: '3043'
 ht-degree: 2%
 
 ---
@@ -122,7 +122,7 @@ För att vault ska kunna integreras skapas en ny säkerhetsprofil med namnet *Ad
 
 ![Bild av information om signaturhändelse](images/security-profiles.png)
 
-Alla säkerhetsprofiler för användare som kräver åtkomst till Adobe Sign historik i Vault måste ha läsbehörighet för objekt av typen signatur-, signatur- och signaturhändelser.
+Säkerhetsprofiler för användare som kräver åtkomst till Adobe Sign historik i Vault måste ha läsbehörighet för signatur-, signatur- och signaturhändelseobjekt.
 
 ![Bild av information om signaturhändelse](images/set-permissions.png)
 
@@ -214,7 +214,7 @@ Adobe Sign avtals livscykel har följande tillstånd:
 * AVBRUTEN
 * FÖRFALLEN
 
-När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det tillstånd som avtalet har. Det gör du genom att lägga till följande lägen i varje livscykel som används av dokument som är berättigade till Adobe-signatur:
+När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det tillstånd som avtalet har. Gör det genom att lägga till följande lägen i varje livscykel som används av dokument som är berättigade till Adobe-signatur:
 
 * **Före Adobe-signatur**  (granskad): Det här är ett platshållarnamn för det tillstånd som dokumentet kan skickas från till Adobe Sign. Beroende på dokumenttypen kan det vara utkastläge eller Granskat. Etiketten för dokumenttillstånd kan anpassas efter kundens behov. Före signaturläget i Adobe måste följande två användaråtgärder definieras:
 
@@ -229,7 +229,7 @@ När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det till
    * Åtgärd som ändrar dokumentets tillstånd till *I signeringsläge för Adobe*. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper för alla livscykler. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentets tillstånd till *Adobe Sign Canceled*-tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper för alla livscykler. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som kallar webbåtgärden&quot;Adobe Sign&quot;.
-   * Åtgärd som anropar webbåtgärden&quot;Cancel Adobe Sign&quot;. Det här tillståndet måste ha en säkerhet som gör att rollen Adobe Sign Admin kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
+   * Åtgärd som anropar webbåtgärden&quot;Cancel Adobe Sign&quot;. Det här tillståndet måste ha en säkerhet som tillåter att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
 
    ![Bild av livscykelsteg 2](images/lifecycle-state2.png)
 
@@ -238,7 +238,7 @@ När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det till
    * Åtgärd som ändrar dokumentets status till läget Adobe Sign Canceled. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentets status till Underteckningsläge i Adobe. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som kallar webbåtgärden&quot;Adobe Sign&quot;
-   * Åtgärd som anropar webbåtgärden&quot;Cancel Adobe Sign&quot;. Det här tillståndet måste ha en säkerhet som gör att rollen Adobe Sign Admin kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
+   * Åtgärd som anropar webbåtgärden&quot;Cancel Adobe Sign&quot;. Det här tillståndet måste ha en säkerhet som tillåter att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
 
    ![Bild av livscykelsteg 3](images/lifecycle-state3.png)
 
@@ -248,7 +248,7 @@ När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det till
    * Åtgärd som ändrar dokumentets tillstånd till Adobe Sign Avvisat. Måltillståndet för den här åtgärden kan vara vilket kundkrav som helst och det kan vara olika för olika typer. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentets tillstånd till signerat Adobe. Måltillståndet för den här åtgärden kan vara vilket kundkrav som helst och det kan vara olika för olika typer. Namnet på den här användaråtgärden måste dock vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som anropar webbåtgärden *Adobe Sign*.
-   * Åtgärd som anropar webbåtgärd *Avbryt Adobe Sign*. Det här tillståndet måste ha en säkerhet som gör att rollen Adobe Sign Admin kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
+   * Åtgärd som anropar webbåtgärd *Avbryt Adobe Sign*. Det här tillståndet måste ha en säkerhet som tillåter att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra status.
 
    ![Bild av livscykelsteg 4](images/lifecycle-state4.png)
 
@@ -294,13 +294,13 @@ En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!
 
    ![Bild](images/middleware-signin.png)
 
-   När användaren har loggat in visar sidan det associerade e-post-id:t i det övre högra hörnet och en extra inställningsflik, som visas nedan.
+   När du har loggat in visas det tillhörande e-post-ID:t och fliken Inställningar på sidan, enligt nedan.
 
    ![Bild](images/middleware_settings.png)
 
 1. Välj fliken **[!UICONTROL Inställningar]**.
 
-   På sidan Inställningar visas de tillgängliga anslutningarna och inga av dem visas vid den första anslutningsinställningen, som visas nedan.
+   På sidan Inställningar visas de tillgängliga anslutningarna och inga av dem visas vid den första anslutningsinställningen, enligt nedan.
 
    ![Bild](images/middleware_newconnection.png)
 

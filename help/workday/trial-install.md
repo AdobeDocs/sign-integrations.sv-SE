@@ -12,10 +12,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: beafe6c0-262f-4f5b-9315-a023a4eef4a2
-source-git-commit: 3f826e88969562a69279a29dfdd98775ec01fd51
+source-git-commit: c25be043b404e9bf7a90496d4e47c1f22069313d
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 39%
+source-wordcount: '995'
+ht-degree: 38%
 
 ---
 
@@ -23,13 +23,13 @@ ht-degree: 39%
 
 ## Översikt {#overview}
 
-Det här dokumentet är utformat för att hjälpa [!DNL Workday]-kunder att lära sig hur man aktiverar ett testkonto hos Adobe Sign och sedan integrerar det i [!DNL Workday]-klienten. Om du vill använda Adobe Sign i [!DNL Workday] måste du känna till hur du skapar och ändrar [!DNL Workday]-objekt som:
+Det här dokumentet är utformat för att hjälpa [!DNL Workday]-kunder att lära sig hur man aktiverar ett testkonto hos Adobe Sign och sedan integrerar det i [!DNL Workday]-klienten. Om du vill använda Adobe Sign i [!DNL Workday] måste du känna till hur du skapar och ändrar [!DNL Workday]-objekt, till exempel:
 
 * Affärsprocessram
 * Installation och konfiguration av klientorganisation
 * Integration med Reporting och [!DNL Workday] Studio
 
-**Obs**! Om du har ett Adobe Sign-konto behöver du inte starta en testversion. Du kan kontakta din Client Success Manager för att begära [!DNL Workday]-integrering.
+**Obs**! Om du har ett befintligt Adobe Sign-konto behöver du inte starta någon testversion. Du kan kontakta din Client Success Manager för att begära [!DNL Workday]-integrering.
 
 De åtgärder du måste utföra för att slutföra integreringen är:
 
@@ -41,7 +41,7 @@ De åtgärder du måste utföra för att slutföra integreringen är:
 
 Om du vill ha en 30-dagars testversion av Adobe Sign måste du fylla i det här [registreringsformuläret](https://land.echosign.com/esign-trial-workday-registration.html).
 
-**Obs**! Vi rekommenderar starkt att du använder en giltig e-postadress för att skapa testversionen och inte ett tillfälligt e-postmeddelande. Du måste ha åtkomst till den här e-postadressen för att kunna verifiera kontot, så adressen måste vara giltig.
+**Obs**! Vi rekommenderar starkt att du använder en giltig e-postadress för att skapa testversionen och inte ett tillfälligt e-postmeddelande. Du måste ha åtkomst till den här e-postadressen för att verifiera kontot, så adressen måste vara giltig.
 
 ![Formulär för testbegäran](images/trial-land.png)
 
@@ -55,7 +55,7 @@ Följ instruktionerna i e-postmeddelandet för att initiera ditt konto och komma
 
 ## Generera en integreringsnyckel {#generate-an-integration-key}
 
-För nya installationer måste du generera en integreringsnyckel i Adobe Sign och sedan ange den i [!DNL Workday]. Med den här nyckeln autentiseras Adobe Sign- och [!DNL Workday]-miljöerna så att de litar på varandra och delar innehåll.
+För nya installationer måste du skapa en integreringsnyckel i Adobe Sign och sedan ange den i [!DNL Workday]. Med den här nyckeln autentiseras Adobe Sign- och [!DNL Workday]-miljöerna så att de litar på varandra och delar innehåll.
 
 Så här skapar du en integreringsnyckel i Adobe Sign:
 
@@ -165,4 +165,4 @@ Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för att be o
 
 * [Granska dokumentkonfigurationen och exempel](https://www.adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}
 
-[**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta supporten för Adobe Sign**](https://www.adobe.com/go/adobesign-support-center)
