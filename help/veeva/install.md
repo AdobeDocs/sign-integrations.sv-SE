@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 2a8cd053744fdd5dbb4b97a861e7d29e0722779f
+source-git-commit: a262c45fa21bf5d7d0536588d2a621c50d1e8fa0
 workflow-type: tm+mt
-source-wordcount: '3039'
+source-wordcount: '3090'
 ht-degree: 2%
 
 ---
@@ -283,9 +283,9 @@ När livscykeln är korrekt konfigurerad bör systemet se till att Adobe Sign Ad
 
 ## Anslut [!DNL Veeva Vault] till Adobe Sign med mellanvara {#connect-middleware}
 
-En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Sign med hjälp av mellanvara:
+När installationen av [!DNL Veeva Vault] och Adobe Sign Admin-kontot har slutförts måste administratören skapa en anslutning mellan de två kontona med hjälp av mellanprogramvaran. Kontoanslutningen [!DNL Veeva Vault] och Adobe Sign initieras av Adobe Sign Identity och används sedan för att lagra Vevaevavaldentiteten. En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Sign med hjälp av mellanvara:
 
-1. Gå till startsidan för [!DNL Veeva Vault] Adobe Sign.
+1. Gå till [Adobe Sign för [!DNL Veeva Vault] Startsidan](https://static.adobesigncdn.com/veevavaultintsvc/index.html).
 1. Välj **[!UICONTROL Logga in]** i det övre högra hörnet.
 
    ![Bild på inloggning med mellanvara](images/middleware_login.png)

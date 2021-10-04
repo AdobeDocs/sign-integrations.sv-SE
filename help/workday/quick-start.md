@@ -11,32 +11,32 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: 5ac9dc27dcdb6cab19281e6aafd4ea0524cc01d6
 workflow-type: tm+mt
-source-wordcount: '1352'
-ht-degree: 36%
+source-wordcount: '1348'
+ht-degree: 30%
 
 ---
 
 # [!DNL Workday] Snabbstart{#workday-quick-start-guide}
 
-[**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta supporten för Adobe Sign**](https://www.adobe.com/go/adobesign-support-center)
 
 ## Översikt {#overview}
 
 Det här dokumentet är utformat för att hjälpa [!DNL Workday]-administratörer att förstå hur man anpassar [!DNL Workday]-affärsprocesser så att de innefattar Adobe Sign för att skaffa e-signaturer. Om du vill använda Adobe Sign i [!DNL Workday] måste du känna till hur du skapar och ändrar [!DNL Workday]-objekt, till exempel:
 
-* Business Process Framework
+* [!UICONTROL Business Process Framework]
 * Installation och konfiguration av innehavare
 * Rapportering och [!DNL Workday] Studio-integrering
 
 ## Komma åt Adobe Sign i [!DNL Workday] {#access-adobe-sign}
 
-Adobe Sign funktion för elektroniska signaturer är [!UICONTROL Granska dokumentsteg] i Business Process Framework (BPF) och som en Distribuera dokument.
+[!UICONTROL Adobe Sign funktioner för elektroniska signaturer ] finns som  [!UICONTROL Granska dokumentsteg ] i  [!UICONTROL Business Process Framework (BPF)] och som en uppgift att distribuera dokument.
 
 ## [!UICONTROL Steget Review Document (Granska dokument)] {#review-document-step}
 
-Adobe Sign för [!DNL Workday] visas via [!UICONTROL steget Granska dokument] som du kan lägga till i någon av de över 400 affärsprocesser som finns i [!DNL Workday], inklusive Erbjudande, Distribuera dokument och uppgifter, Föreslå kompensation med mera.
+Adobe Sign för [!DNL Workday] visas via [!UICONTROL steget Granska dokument] som du kan lägga till i över 400 affärsprocesser inom [!DNL Workday], inklusive [!UICONTROL Erbjudande], [!UICONTROL Distribuera dokument och uppgifter], [!UICONTROL Föreslå kompensation] med mera.
 
 Du kan läsa [[!DNL Workday] community-artiklarna på [!UICONTROL Granska dokumentsteg]](https://doc.workday.com/#/reader/3DMnG~27o049IYFWETFtTQ/TboWWKQemecNipWgxLAjqg).
 
@@ -62,7 +62,7 @@ Så här konfigurerar du [!UICONTROL steget Granska dokument]:
    * När en person i en roll signerar, är radsteget avslutat och dokumentet flyttas till nästa radsteg.
    * När alla rader har signerats är [!UICONTROL steget Granska dokument] slutfört.
 
-1. Ange vilket dokument som ska signeras. Om detta är ett affärsprocesserbjudande, kan du använda dokumentet från steget ”Generate Document” (Skapa dokument). I annat fall ska du välja ett befintligt dokument eller en rapport.
+1. Ange vilket dokument som ska signeras. Om dokumentet är ett [!UICONTROL Erbjudande BP] kan du använda det från ett genereringsdokumentsteg. I annat fall ska du välja ett befintligt dokument eller en rapport.
 
 1. Upprepa steg 3 för de dokument som du behöver.
 
@@ -78,11 +78,11 @@ Välj **[!UICONTROL Affärsprocess]** > **[!UICONTROL Behåll omdirigering]** p�
 
 ## Information om steg i affärsprocess {#business-process-step-notes}
 
-Business Process Framework är kraftfullt; Du måste dock se till att
+[!UICONTROL Affärsprocessens ] ramverk är kraftfullt; Du måste dock se till att
 
 * Varje affärsprocess måste ha ett slutförandesteg, vilket är idealiskt i slutet av affärsprocessen.
 
-* Ett steg för slutförande anges på menyn för relaterade åtgärder i sökikonen. Detta är bara möjligt när du&quot;visar&quot; affärsprocessen och inte när du&quot;redigerar&quot; den.
+* Ett slutförandesteg anges på menyn för relaterade åtgärder i sökikonen. Detta är bara möjligt när du&quot;visar&quot; affärsprocessen och inte när du&quot;redigerar&quot; den.
 
 * Varje steg i affärsprocessen körs i sekvens.
 
@@ -90,7 +90,7 @@ Business Process Framework är kraftfullt; Du måste dock se till att
 
 ### Exempel: erbjudande {#example-offer}
 
-Erbjudandet är en underprocess till Job Application Dynamic BP som måste konfigureras för att genomföra offertförfrågan. Det aktiveras när Job Application-läget flyttas till ”Offer” (Erbjudande) eller ”Make Offer” (Gör erbjudande).
+Erbjudandets affärsprocesserbjudande är en underprocess till [!UICONTROL Job Application Dynamic BP] som måste konfigureras för att genomföra offertförfrågan. Den utlöses när Job Application-tillståndet flyttas till [!UICONTROL Erbjudande] eller [!UICONTROL Skapa erbjudande].
 
 I exemplet nedan använder ett [!UICONTROL steg för Granska dokument] ett dynamiskt dokumentsteg för både Nordamerika och Japan.
 
@@ -120,7 +120,7 @@ Objekt inom {{hakparenteser}} är [Adobe-texttaggar](https://adobe.com/go/adobes
 
 I [!UICONTROL steget Granska dokument] refereras det dynamiska dokumentet från föregående steg och den sekventiella signeringsprocessen definieras via två signeringsgrupper.
 
-Beteendet nedan dirigerar det dynamiskt genererade dokumentet först till rekryteringshanteraren och sedan till kandidaten.
+Beteendet som visas nedan dirigerar det dynamiskt genererade dokumentet först till rekryteringshanteraren och sedan till kandidaten.
 
 ![[!DNL Workday] signeringsgrupper definieras](images/configure-rd-stepsmaller-575.png)
 
@@ -128,7 +128,7 @@ Beteendet nedan dirigerar det dynamiskt genererade dokumentet först till rekryt
 
 Aktiviteten för massdistribution av dokument eller uppgifter, som introducerades i [!DNL Workday] 30, kan användas för att skicka ett enstaka dokument till en stor grupp (&lt;20K) med enskilda signerare. Detta är begränsat till en signatur per dokument. Distributionen skapas genom att åtgärden [!UICONTROL Skapa Distribuera dokument eller uppgifter] aktiveras från sökfältet.
 
-Exempel: Skicka ett equity choice-formulär till alla chefer med Global Modern Services. Du kan filtrera det ytterligare till enskilda chefer om du vill.
+Exempel: Skicka ett urvalsformulär för medarbetares egna kapital till alla chefer med [!UICONTROL Globala moderna tjänster]. Du kan filtrera det ytterligare till enskilda chefer om du vill.
 
 Du kan också komma åt rapporten **View Distribute Documents or Tasks** för att spåra distributionsförloppet.
 
@@ -158,7 +158,7 @@ Signaturcykeln [!DNL Workday] undertrycker alla e-postmeddelanden från Adobe Si
 
 När ett dokument har signerats av alla signaturgrupper distribueras en kopia av det signerade dokumentet till alla medlemmar i signaturgruppen via e-post.
 
-Du kan kontakta din Adobe Sign Success Manager eller [Adobe Sign Support-teamet](https://adobe.com/go/adobesign-support-center) om du vill inaktivera detta beteende.
+Du kan kontakta din [!UICONTROL Adobe Sign Success Manager] eller [Adobe Sign Support-teamet](https://adobe.com/go/adobesign-support-center) om du vill inaktivera detta beteende.
 
 Inom [!DNL Workday] kan du komma åt de signerade dokumenten på den fullständiga processposten. Du kan hitta:
 
@@ -186,9 +186,9 @@ Bilden nedan visar ett signerat offertbrev för kandidaten Chris Foxx.
 
 Adobe Sign är integreringspartnern och ska kontaktas om integreringen inte kan hämta signaturer eller om meddelanden med väntande signeringar misslyckas.
 
-Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för att be om hjälp. Det går även att ringa till Adobes tekniska support på 1-866-318-4100, vänta på produktlistan och sedan ange 4 sedan ange 2 (enligt anvisningarna).
+Adobe Sign-kunder bör kontakta sin Customer Success Manager för att få hjälp. Alternativt kan [!UICONTROL Adobe Teknisk support] nås via telefon: 1-866-318-4100, vänta på produktlistan och ange sedan: 4 och sedan 2 (enligt uppmaningen).
 
-* [Lägg till Adobe-texttaggar i dokument](https://adobe.com/go/adobesign_text_tag_guide)
+* [Lägg till Adobe-texttaggar i dokument](https://www.adobe.com/go/adobesign_text_tag_guide)
 
 <!--
 [Download PDF](images/adobe-sign-for-workday-quick-start-guide-2016.pdf)
