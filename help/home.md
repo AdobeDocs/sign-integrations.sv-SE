@@ -8,10 +8,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: d462ccf41fa5483cfa02f5eaf154c23f26157a1e
+source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
 workflow-type: tm+mt
-source-wordcount: '75'
-ht-degree: 10%
+source-wordcount: '127'
+ht-degree: 25%
 
 ---
 
@@ -37,7 +37,7 @@ Lär dig hur du installerar, integrerar och använder [!DNL Adobe Sign]-lösning
   </td>
   <td>
     <a href="workday/tutorial-video.md">
-      <img alt="Integrera Adobe Sign med [!DNL Workday]" src="images/wd-integration.png"/>
+    <img alt="Integrera Adobe Sign med [!DNL Workday]" src="images/wd-integration.png"/>
     </a>
     <div>
     <a href="workday/tutorial-video.md"><strong>Integrera Adobe Sign med [!DNL Workday]</strong></a>
@@ -45,8 +45,13 @@ Lär dig hur du installerar, integrerar och använder [!DNL Adobe Sign]-lösning
     <em>Lär dig hur du konfigurerar Adobe Sign så att det fungerar i [!DNL Workday] för hantering av alla dina dokument</em>
   </td>
   <td>
-    <img alt="Avstånd" src="images/whitespace.png"/>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
+    <img alt="Adobe Sign Support Community" src="images/sign-forum.png"/>
+    </a>
     <div>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign Support Community</strong></a>
+    </div>
+    <em>Ställ frågor, dela feedback och tips eller diskutera produkter och tjänster för Sign-integrering med andra Adobe Sign-användare och -entusiaster.</em>
     <br>
   </td>
 </tr>
