@@ -1,17 +1,17 @@
 ---
 title: Versionsinformation om Adobe Sign för NetSuite
-description: 'Läs om de nya funktionerna och ändringarna som ingår i den aktuella versionen av Adobe Sign-integreringen för NetSuite.  '
+description: Läs om de nya funktionerna och ändringarna som ingår i den aktuella versionen av Adobe Sign-integreringen för NetSuite.
 type: Documentation
 solution: Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+exl-id: 6317723e-447a-4506-a621-4d967bdd6561
+source-git-commit: f8d0bc748872e675dc1c638eb4050efe9e3147ef
 workflow-type: tm+mt
 source-wordcount: '849'
 ht-degree: 5%
 
 ---
-
 
 # Versionsinformation om Adobe Sign för NetSuite
 
@@ -23,11 +23,11 @@ Adobe Sign-ikonen har uppdaterats till den nya bilden.
 
 ## Tidigare versioner
 
-### Adobe Sign for NetSuite 4.0.4
+### Adobe Sign för NetSuite 4.0.4
 
 4.0.4 är helt anpassat för att använda kontospecifika domäner för all nygenererad trafik.
 
-The Adobe Sign icon has been updated to the new graphic.
+Adobe Sign-ikonen har uppdaterats till den nya bilden.
 
 ### Adobe Sign för NetSuite 4.0.2
 
@@ -44,9 +44,9 @@ Kunder uppmanas att uppdatera till det senaste paketet.
 
 **Tillagd automatisk etablering av användare via NetSuite**
 
-A new custom preference has been added for v4.0. When enabled, users who send agreements in NetSuite are automatically auto-provisioned with an Adobe Document Cloud eSign services user account.
+En ny anpassad inställning har lagts till för v4.0. När det här alternativet är aktiverat kommer användare som skickar avtal i NetSuite automatiskt att tilldelas ett Adobe Document Cloud-användarkonto för eSign-tjänster.
 
-**Certified with &#39;Built for NetSuite&#39;**
+**Certifierad med&quot;Built for NetSuite&quot;**
 
 Den här versionen klarade certifieringen&quot;Built for NetSuite&quot; och uppfyller alla de senaste metodstrategierna för NetSuite-design.
 
@@ -56,13 +56,13 @@ Nu kan du se Adobe Document Cloud eSign-tjänster (eller Adobe eSign-tjänster f
 
 **Implementerad förbättrad säkerhet med OAuth**
 
-To improve data security, eSign services now use OAuth 2.0 to authenticate your Adobe Document Cloud eSign services account within NetSuite. Med det nya protokollet kan NetSuite kommunicera med eSign-tjänster utan att begära ditt lösenord för eSign-tjänsterna. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto utsätts för risker. Den här förbättringen påverkar inte implementeringen, men du måste göra en engångskonfiguration för att godkänna att ditt NetSuite-paket kommunicerar med Adobe Document Cloud. Detta görs under installationen. För kunder som uppgraderar från en tidigare version av paketet - v3.5.9 och tidigare - ersätts den API-nyckel som tidigare använts av en OAuth-token som genererats under auktoriseringsprocessen.
+För att förbättra datasäkerheten använder nu eSign-tjänsterna OAuth 2.0 för att autentisera ditt Adobe Document Cloud eSign-konto inom NetSuite. Med det nya protokollet kan NetSuite kommunicera med eSign-tjänster utan att begära ditt lösenord för eSign-tjänsterna. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto utsätts för risker. Den här förbättringen påverkar inte implementeringen, men du måste göra en engångskonfiguration för att godkänna att ditt NetSuite-paket kommunicerar med Adobe Document Cloud. Detta görs under installationen. För kunder som uppgraderar från en tidigare version av paketet - v3.5.9 och tidigare - ersätts den API-nyckel som tidigare använts av en OAuth-token som genererats under auktoriseringsprocessen.
 
-**Migrated the eSign services from SOAP APIs to REST APIs**
+**Migrerade eSign-tjänsterna från SOAP API:er till REST API:er**
 
 För att öka effektiviteten, flexibiliteten och bearbetningshastigheten har Adobe Document Cloud eSign-tjänsterna, och följaktligen även v4.0-integreringen för NetSuite, migrerats från SOAP-baserade till REST-baserade API:er.
 
-### Adobe Sign for NetSuite 3.0
+### Adobe Sign för NetSuite 3.0
 
 **Avancerade deltagarroller - godkännare**
 
@@ -76,7 +76,7 @@ Förhandsgranska avtal eller dra och släpp formulärfält innan de skickas för
 
 **Skicka påminnelse till aktuell signerare**
 
-Send immediate reminder to current signer
+Skicka påminnelse direkt till den aktuella signeraren
 
 **Avancerade autentiseringsprinciper för signerare**
 
@@ -99,12 +99,12 @@ Send immediate reminder to current signer
 
 * Lägg till signerat PDF som en länk till URL-adressen eller som bilaga i NetSuite
 * Lägg till granskningsspår i avtalsposten ett$er-avtal har signerats
-* Use the transaction contact as signer by default, instead of Customer email
+* Använd transaktionskontakten som signerare i stället för som kundens e-postadress
 * Bevilja avsändare möjligheten att markera mottagare som godkännare
 
 **Transaktionsfiler**
 
-You can select files to attach from the current transaction with new ‘Transaction Files’ dropdown list.
+Du kan välja filer som ska bifogas från den aktuella transaktionen med den nya listrutan Transaktionsfiler.
 
 **Adobe PDF-certifiering för alla EchoSign-dokument**
 
@@ -113,14 +113,14 @@ You can select files to attach from the current transaction with new ‘Transact
 
 **Samla in stöttande dokument**
 
-* Senders can collect additional supporting documents from Signers during signing, such as a driver’s license, business certificate, and more.
+* Avsändare kan samla in ytterligare stöddokument från signerare vid signering, t.ex. ett körkort, ett affärscertifikat med mera.
 * Insamlade dokument blir en del av det undertecknade avtalets officiella register
 
 **Villkorliga datafält**
 
 * Definiera villkorlig logik för avtalsfält
-* Conditions can be based on values for one or more fields on the agreement
-* Conditions can be de!ned through the drag-and-drop forms authoring UI or through text-tags
+* Villkoren kan baseras på värden för ett eller flera fält i avtalet
+* Villkoren kan definieras genom dra-och-släpp-gränssnittet för formulärredigering eller via texttaggar
 * Undertecknaren visas med rätt fält när ett dokument signeras baserat på de!end-villkor
 
 **Förbättringar med ytterligare EchoSign-formulärfält**
