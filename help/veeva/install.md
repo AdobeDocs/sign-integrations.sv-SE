@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: d8071d9aa23351e31a9360d3c4d17f6297d0e2f1
+source-git-commit: 45bc2d698396bb07c4a246930d34b7e2ad0f6648
 workflow-type: tm+mt
-source-wordcount: '3115'
+source-wordcount: '3113'
 ht-degree: 2%
 
 ---
@@ -41,7 +41,7 @@ De steg som krävs för att slutföra integreringen är:
 
 ## Konfigurera [!DNL Veeva Vault]
 
-För att konfigurera [!DNL Veeva Vault] för integrering med Adobe Sign skapar vi vissa objekt som hjälper till att spåra historiken för en avtalscykel i Vault. Administratörer måste skapa följande objekt:
+Om du vill konfigurera [!DNL Veeva Vault] för integrering med Adobe Sign skapar du vissa objekt som hjälper till att spåra historiken för en avtalscykel i Vault. Administratörer måste skapa följande objekt:
 
 * Signatur
 * Undertecknare
@@ -122,7 +122,7 @@ För att vault ska kunna integreras skapas en ny säkerhetsprofil med namnet *Ad
 
 ![Bild av information om signaturhändelse](images/security-profiles.png)
 
-Säkerhetsprofiler för användare som kräver åtkomst till Adobe Sign historik i Vault måste ha läsbehörighet för signatur-, signatur- och signaturhändelseobjekt.
+Säkerhetsprofiler för användare som behöver åtkomst till Adobe Sign-historik i Vault måste ha läsbehörighet för signatur-, signatur- och signaturhändelseobjekt.
 
 ![Bild av information om signaturhändelse](images/set-permissions.png)
 
@@ -223,7 +223,7 @@ När ett vaultdokument skickas till Adobe Sign ska dess status motsvara det till
 
    ![Bild av livscykelsteg 1](images/lifecycle-state1.png)
 
-* **I Adobe Sign Draft**: Det här är ett platshållarnamn för det tillstånd som anger att dokumentet redan har överförts till Adobe Sign och att avtalet är i utkastläge. Det är ett obligatoriskt tillstånd. Det här tillståndet måste innehålla följande fem användaråtgärder:
+* **I Adobe Sign Draft**: Det här är ett platshållarnamn för det tillstånd som anger att dokumentet redan har överförts till Adobe Sign och att avtalet är i utkastläge. Det är ett obligatoriskt tillstånd. Det här tillståndet måste definiera följande fem användaråtgärder:
 
    * Åtgärd som ändrar dokumentets tillstånd till *I Adobe Sign Authoring*-tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper för alla livscykler. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentets tillstånd till *I signeringsläge för Adobe*. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper för alla livscykler. Om det behövs kan villkoret för den här åtgärden ställas in på&quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
@@ -283,7 +283,7 @@ När livscykeln är korrekt konfigurerad bör systemet se till att Adobe Sign Ad
 
 ## Anslut [!DNL Veeva Vault] till Adobe Sign med mellanvara {#connect-middleware}
 
-När installationen av [!DNL Veeva Vault] och Adobe Sign Admin-kontot har slutförts måste administratören skapa en anslutning mellan de två kontona med hjälp av mellanprogramvaran. Kontoanslutningen [!DNL Veeva Vault] och Adobe Sign initieras av Adobe Sign Identity och används sedan för att lagra Vevaevavaldentiteten.
+När installationen av [!DNL Veeva Vault] och Adobe Sign Admin-kontot har slutförts måste administratören skapa en anslutning mellan de två kontona med hjälp av mellanprogramvaran. Kontoanslutningen [!DNL Veeva Vault] och Adobe Sign initieras av Adobe Sign Identity och används sedan för att lagra Vevavaultidentiteten.
 För systemsäkerhet och stabilitet måste administratören använda ett dedikerat [!DNL Veeva Vault] system-/tjänst-/verktygskonto, till exempel `adobe.for.veeva@xyz.com`, i stället för ett personligt användarkonto, till exempel `bob.smith@xyz.com`.
 
 En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Sign med hjälp av mellanvara:
