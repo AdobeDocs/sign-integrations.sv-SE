@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 7ded835b48519cba656f160e691c697c91e2c8d0
+source-git-commit: aef70e46f24bb019b07092d84d69519fe16846e4
 workflow-type: tm+mt
-source-wordcount: '3131'
+source-wordcount: '3163'
 ht-degree: 2%
 
 ---
@@ -182,9 +182,13 @@ Integrering med Adobe Sign och Vault kräver att du skapar och konfigurerar föl
 
    Typ: Dokumentmål: Visa i vault-URL: <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
 
+   ![Bild av Skapa Adobe Sign](images/create-adobe-sign.png)
+
 * **Avbryt Adobe Sign**: Det annullerar ett befintligt avtal i Adobe Sign och återställer ett dokuments status till det ursprungliga.
 
    Typ: Dokumentmål: Visa i vault-URL: : <https://api.na1.adobesign.com/api/gateway/veevavaultintsvc/partner/agreement/cancel?docId=${Document.id}&majVer=${Document.major_version_number__v}&minVer=${Document.minor_version_number__v}&vaultid=${Vault.id}&useWaitPage=true>
+
+   ![Bild av Avbryt Adobe Sign](images/cancel-adobe-sign.png)
 
 ## Uppdatera dokumentets livscykel {#document-lifecycle}
 
@@ -192,12 +196,16 @@ För varje dokumenttyp som är berättigad till Adobe-signatur måste motsvarand
 
 ### Livscykelroll {#lifecycle-role}
 
-Adobe Sign Admin-programrollen måste läggas till i alla livscykler som används av dokument som är berättigade till Adobe Signature. Den här rollen bör skapas med följande alternativ:
-
-* Aktivera dynamisk åtkomstkontroll
-* Regler för dokumentdelning som endast omfattar dokumenttypsgrupp
+Adobe Sign Admin-programrollen måste läggas till i alla livscykler som används av dokument som är berättigade till Adobe-signatur, vilket visas nedan.
 
 ![Bild av livscykeladministratörsroller](images/document-lifecycle-admin-role.png)
+
+Administratörsrollen ska skapas med följande alternativ:
+
+* Aktiverad dynamisk åtkomstkontroll.
+* Regler för dokumentdelning som endast omfattar dokumenttypsgrupp, som bilden nedan visar.
+
+![Bild av delningsregel för Adobe Sign](images/adobe-sign-sharing-rule.png)
 
 ### Livscykeltillstånd {#lifecycle-states}
 
@@ -263,7 +271,9 @@ Administratörer måste skapa en ny dokumenttypsgrupppost med namnet&quot;Adobe 
 
 ![Bild av dokumenttyp](images/document-type.png)
 
-![Bild av dokumenttyp](images/document-edit-details.png)
+![Bild av redigeringsinformation för dokument](images/document-edit-details.png)
+
+![Bild av dokumenttypsgrupper](images/document-type-groups.png)
 
 ### Skapa inställningar för användarroll {#create-user-role-setup}
 
