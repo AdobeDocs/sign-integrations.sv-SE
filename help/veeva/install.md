@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 722f39a7220d72fde19ebb1058c8c2e8dea06b46
+source-git-commit: f647d0573f3e44f5a7e7997a309a8d18886959be
 workflow-type: tm+mt
-source-wordcount: '3401'
+source-wordcount: '3317'
 ht-degree: 2%
 
 ---
@@ -43,41 +43,13 @@ De viktigaste stegen för att slutföra integreringen är:
 
 Konfigurera [!DNL Veeva Vault] För integrering med Adobe Sign måste du utföra följande steg:
 
-**Steg 1.** Skapa en ny grupp som heter Adobe Sign administratörsgrupp.
-
-**Steg 2.** [Distribuera paketet](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip).
-
-**Steg 3.** Skapa säkerhetsprofiler
-
-**Steg 4.** Skapa användare
-
-**Steg 5.** Konfigurera dokumenttypsgrupp
-
-**Steg 6.** Skapa användarrollsinställningar
-
-**Steg 7.** Ställ in dokumentfält
-
-**Steg 8.** Deklarera dokumentåtergivningar
-
-**Steg 9.** Uppdatera webbåtgärder
-
-**Steg 10.** Uppdatera dokumentets livscykel
-
-**Steg 11.** Lägg till Adobe Sign-scenen i den allmänna livscykeln i livscykelstegsgrupper
-
-**Steg 12.** Ange behörigheter för användarrollen i livscykeltillståndet
-
-**Steg 13.** Ställ in kärnsäkerhet baserat på dokumentstatus och användarroll
-
-**Steg 14.** Avbryt Skapa dokumentmeddelanden för Adobe Sign
-
-### 1. Skapa grupp {#create-group}
+### Steg 1. Skapa grupp {#create-group}
 
 Så här konfigurerar du Adobe Sign för [!DNL Vault], en ny grupp med namnet *Adobe Sign-administratörsgrupp* har skapats. Den här gruppen används för att ställa in dokumentfältnivåsäkerhet för Adobe Sign-relaterade fält och ska inkludera *Integreringsprofil för Adobe Sign* som standard.
 
 ![Bild av information om signaturhändelse](images/create-admin-group.png)
 
-### 2. Distribuera paketet {#deploy-package}
+### Steg 2. Distribuera paketet {#deploy-package}
 
 [Distribuera paketet](https://helpx.adobe.com/content/dam/help/en/PKG-AdobeSign-Integration.zip) och följ stegen. När paketet har distribuerats skapas:
 
@@ -166,7 +138,7 @@ Du måste skapa en programroll med namnet *Adobe Sign-administratörsroll*. Den 
 
 ![Bild av att skapa programroller](images/create-application-roles.png)
 
-### 3. Konfigurera säkerhetsprofiler {#security-profiles}
+### Steg 3. Konfigurera säkerhetsprofiler {#security-profiles}
 
 En ny säkerhetsprofil som heter *Integreringsprofil för Adobe Sign* skapas och dess behörighet anges för *Administratörsåtgärder för Adobe Sign*. Adobe Sign-integreringsprofilen tilldelas systemkontot och används av integreringen när Vault-API:er anropas. Den här profilen tillåter behörigheter för:
 
@@ -179,7 +151,7 @@ Säkerhetsprofiler för användare som behöver åtkomst till Adobe Sign-histori
 
 ![Bild av information om signaturhändelse](images/set-permissions.png)
 
-## 4. Skapa användare {#create-user}
+### Steg 4. Skapa användare {#create-user}
 
 Vaults systemkontoanvändare av Adobe Sign-integreringen måste:
 
@@ -198,7 +170,7 @@ Om du vill säkerställa att systemkontoanvändaren tillhör Adobe Sign administ
 
    ![Bild av information om signaturhändelse](images/add-user.png)
 
-### 5. Skapa dokumenttypsgrupp {#create-document-type-group}
+### Steg 5. Konfigurera dokumenttypsgrupp {#create-document-type-group}
 
 När du distribuerar Adobe Sign-paketet skapas en dokumenttypsgrupppost med namnet Adobe Sign-dokument.
 
@@ -212,13 +184,13 @@ Du måste lägga till den här dokumenttypgruppen för alla dokumentklassificeri
 
 **Obs!** Om inställningsobjektet för användarroll inte innehåller det fält som refererar till objektet Dokumenttypgrupp, måste du lägga till fältet.
 
-### 6. Skapa användarrollskonfiguration {#create-user-role-setup}
+### Steg 6. Skapa användarrollskonfiguration {#create-user-role-setup}
 
 När livscykeln/livscyklerna har konfigurerats korrekt bör systemet säkerställa att Adobe Sign-administratörsanvändare läggs till av DAC för alla dokument som är berättigade till Adobe Sign-processer. Detta görs genom att skapa rätt inställningspost för användarrollen med följande specifikationer:
 
-* Dokumenttypgrupp som &quot;Adobe Sign-dokument&quot;,
-* Programrollen som Adobe Sign-administratörsroll och
-* Integreringsanvändare.
+* Dokumenttypsgrupp som Adobe Sign-dokument
+* Programroll som Adobe Sign-administratörsroll
+* Integreringsanvändare
 
 ![Bild av konfiguration av användarroll](images/user-role-setup.png)
 
@@ -226,7 +198,7 @@ När livscykeln/livscyklerna har konfigurerats korrekt bör systemet säkerstäl
 
 ![Bild av konfiguration av användarroll](images/create-setup-field.png)
 
-### 7. Ställ in dokumentfält {#create-fields}
+### Steg 7. Ställ in dokumentfält {#create-fields}
 
 Om du vill integrera med Adobe Sign måste du använda två nya dokumentfält:
 
@@ -257,7 +229,7 @@ Så här ställer du in dokumentfält:
 
    ![Bild av åtgärder för att tillåta Adobe Sign-användare](images/allow-adobe-sign-user-actions.png)
 
-### 8. Deklarera dokumentåtergivningar {#declare-renditions}
+### Steg 8. Deklarera dokumentåtergivningar {#declare-renditions}
 
 Den nya återgivningstypen *Adobe Sign-återgivning (adobe_sign_rendition__c) används av vaultintegreringen för att överföra signerade PDF-dokument till Adobe Sign. Adobe Sign-återgivningen ska deklareras för varje dokumenttyp som kan signeras av Adobe.
 
@@ -265,7 +237,7 @@ Den nya återgivningstypen *Adobe Sign-återgivning (adobe_sign_rendition__c) an
 
 ![Bild av återgivningstyper](images/edit-details-clinical-type.png)
 
-### 9. Uppdatera webbåtgärder {#web-actions}
+### Steg 9. Uppdatera webbåtgärder {#web-actions}
 
 För integrering med Adobe Sign och Vault måste du skapa och konfigurera följande två webbåtgärder:
 
@@ -281,7 +253,7 @@ För integrering med Adobe Sign och Vault måste du skapa och konfigurera följa
 
    ![Bild av Cancel Adobe Sign](images/cancel-adobe-sign.png)
 
-### 10. Uppdatera dokumentets livscykel {#document-lifecycle}
+### Steg 10. Uppdatera dokumentets livscykel {#document-lifecycle}
 
 För varje dokumenttyp som är berättigad till Adobe-signatur måste motsvarande dokumentlivscykel uppdateras genom att nya livscykelroller och tillstånd läggs till.
 
@@ -365,21 +337,21 @@ I följande diagram visas mappningarna mellan Adobe Sign-avtal och Vaults dokume
 
 ![Bild av Adobe Sign Vault-mappningar](images/sign-vault-mappings.png)
 
-### 11. Lägg till Adobe Sign-steget i den allmänna livscykeln i livscykelstegsgrupper
+### Steg 11. Lägg till Adobe Sign-scenen i den allmänna livscykeln i livscykelstegsgrupper
 
 ![Bild av Adobe Sign Vault-mappningar](images/add-adobe-sign-stage.png)
 
-### 12. Ange behörigheter för användarrollen i livscykeltillståndet
+### Steg 12. Ange behörigheter för användarrollen i livscykeltillståndet
 
 Du måste ange lämpliga behörigheter för varje användarroll i livscykeltillståndet, som visas i bilden nedan.
 
 ![Bild av Adobe Sign Vault-mappningar](images/set-user-role-permissions.png)
 
-### 13. Ställ in kärnsäkerhet baserat på dokumentstatus och användarroll
+### Steg 13. Ställ in kärnsäkerhet baserat på dokumentstatus och användarroll
 
 ![Bild av Adobe Sign Vault-mappningar](images/set-atomic-security.png)
 
-### 14. Skapa dokumentmeddelanden för Adobe Sign Avbryt
+### Steg 14. Avbryt Skapa dokumentmeddelanden för Adobe Sign
 
 ![Bild av Adobe Sign Vault-mappningar](images/create-cancel-message.png)
 
