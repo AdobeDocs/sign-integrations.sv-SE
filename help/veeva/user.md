@@ -1,6 +1,6 @@
 ---
-title: Användarhandbok för Veeva Vault
-description: Veeva Vault-kundens användarhandbok om hur du använder Adobe Sign-integrering med Veeva
+title: Användarhandbok för Veva Vault
+description: Användarhandbok för Veva Vault-kunder om hur du använder Adobe Sign-integrering med Veva
 products: Adobe Sign
 content-type: reference
 locnotes: All languages; screenshots to follow what's there already (seems there is a mix within a given language version of the article)
@@ -9,10 +9,10 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 63a34c2d77ba7a262670da624c86a3730de0fdc5
+source-git-commit: e1394c24aebd1e026eb6c5a33935149f33ef8ea4
 workflow-type: tm+mt
-source-wordcount: '563'
-ht-degree: 3%
+source-wordcount: '668'
+ht-degree: 2%
 
 ---
 
@@ -20,43 +20,43 @@ ht-degree: 3%
 
 [**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
 
-Det här dokumentet är utformat för att hjälpa [!DNL Veeva Vault]-kunder att lära sig hur man använder Adobe Sign för [!DNL Veeva Vault]-integrering för att skicka ett avtal.
+Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig använda Adobe Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
 
 ## Översikt {#overview}
 
-Adobe Sign integrering med [!DNL Veeva Vault] underlättar processen att erhålla en signatur eller godkännande av dokumentation som kräver giltiga signaturer eller granskningsbar dokumentbearbetning.
+Adobe Sign-integrering med [!DNL Veeva Vault] underlättar processen för att erhålla en signatur eller ett godkännande för all dokumentation som kräver juridiska signaturer eller granskningsbar dokumentbearbetning.
 
-Den övergripande processen att skicka dokument för signering liknar att skicka ett e-postmeddelande, så det är enkelt att anta för de flesta användare.
+Den övergripande processen att skicka dokument för signering påminner om att skicka ett e-postmeddelande, så det är enkelt att använda för de flesta användare.
 
-Adobe Sign integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arbetsflödena för dokument och signaturer. Genom att använda arbetsflödet för integrering kan du:
+Adobe Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arbetsflödena för dokument och signaturer. Genom att använda arbetsflödet för integrering kan du
 
-* Spara tid och resurser på snigelpost, kurirtjänster och fax.
-* Skicka kontrakt för e-signatur eller godkännande från [!DNL Veeva Vault], få åtkomst till kontraktshistorik i realtid och visa sparade kontrakt.
-* Spåra avtalen i realtid i hela organisationen och få uppdateringar när avtal visas, signeras, avbryts eller avvisas.
+* Spara tid och resurser på snigelpost, övernattning och fax.
+* Skicka kontrakt för e-signering eller godkännande från [!DNL Veeva Vault], få åtkomst till kontraktshistorik i realtid och visa sparade kontrakt.
+* Spåra erbjudandena i realtid i hela organisationen och få uppdateringar när avtal visas, signeras, avbryts eller avvisas.
 * eSign på över 20 språk och stöd för faxtjänster på 50+ platser runt hela jorden.
 * Skapa återanvändbara avtalsmallar för sändningsalternativ.
 
 ## Skicka ett avtal med Adobe Sign för [!DNL Veeva Vault] {#send-sign-vault-agreement}
 
-Så här skickar du ett avtal med Adobe Sign for Veeva:
+Så här skickar du ett avtal med Adobe Sign för Veva:
 
-1. Gå till [[!DNL Veeva Vault] inloggningssidan](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar Vaults hemsida, som visas nedan.
+1. Gå till [[!DNL Veeva Vault] inloggningssida](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar startsidan för ditt valv, som visas nedan.
 
    ![](images/vault-home.png)
 
-1. Välj fliken **[!UICONTROL Bibliotek]** och välj sedan **[!UICONTROL Skapa]** i det övre högra hörnet.
+1. Välj **[!UICONTROL Bibliotek]** och sedan välja **[!UICONTROL Skapa]** från det övre högra hörnet.
 
    ![](images/create-library.png)
 
-1. Välj **[!UICONTROL Överför och Fortsätt]**.
+1. Välj **[!UICONTROL Överför och fortsätt]**.
 
-1. Överför alla dokument från den lokala enheten.
+1. Ladda upp alla dokument från den lokala enheten.
 
-1. I dialogrutan som visas väljer du **[!UICONTROL Skriv]** som *[!UICONTROL Klinisk]* och sedan en **[!UICONTROL undertyp]** och **[!UICONTROL Klassificering]**, om det behövs.
+1. I dialogrutan som visas väljer du **[!UICONTROL Text]** som *[!UICONTROL Kliniska]* och välj sedan en **[!UICONTROL Undertyp]** och **[!UICONTROL Klassificering]**, om så krävs.
 
    ![](images/choose-document-type.png)
 
-1. Stäng dialogrutan genom att välja **[!UICONTROL OK]**.
+1. Välj **[!UICONTROL OK]** för att stänga dialogrutan.
 
 1. Välj **[!UICONTROL Nästa]**.
 
@@ -64,57 +64,70 @@ Så här skickar du ett avtal med Adobe Sign for Veeva:
 
    ![](images/metadata-details.png)
 
-1. Det skapar ett testdokument med statusen **[!UICONTROL Utkast]**, enligt nedan.
+1. Ett testdokument skapas i **[!UICONTROL Utkast]** status, se nedan.
 
    ![](images/document-draft.png)
 
-1. I det övre högra hörnet väljer du ![kugghjulsikonen](images/icon-gear.png) och väljer **[!UICONTROL Starta granskning]**.
+1. I det övre högra hörnet väljer du ![kugghjulsikon](images/icon-gear.png) och väljer **[!UICONTROL Starta granskning]**.
 
    ![](images/start-review.png)
 
-1. Välj **[!UICONTROL Granskare]** och **[!UICONTROL Granskningsförfallodatum]**.
+1. Välj **[!UICONTROL Granskare]** och **[!UICONTROL Granska förfallodatum]**.
 
-1. Välj **[!UICONTROL Start]**. Dokumentstatusen ändras till [!UICONTROL IN REVIEW].
+1. Välj **[!UICONTROL Start]**. Dokumentstatus ändras till [!UICONTROL GRANSKAS].
 
    ![](images/in-review.png)
 
-1. Slutför den tilldelade uppgiften å granskarnas vägnar. När du är klar ändras dokumentstatusen till [!UICONTROL GRANSKAD].
+1. Slutför den tilldelade uppgiften för granskarnas räkning. När du är klar ändras dokumentstatusen till [!UICONTROL GRANSKAD].
 
    ![](images/reviewed-status.png)
 
-1. Välj ![kugghjulsikonen](images/icon-gear.png) och välj **[!UICONTROL Adobe Sign]**.
+1. Välj ![kugghjulsikon](images/icon-gear.png) och väljer **[!UICONTROL Adobe Sign]**.
 
    ![](images/select-adobe-sign.png)
 
-1. I fönstret iFrame som öppnas i Vault anger du mottagarens e-postadress och väljer **[!UICONTROL Nästa]**.
+1. I iFrame-fönstret som öppnas i Vault anger du mottagarens e-postadress och väljer **[!UICONTROL Nästa]**.
 
    ![](images/iframe.png)
+
+   **Obs!** Om det inte finns något Adobe Sign-användarkonto för avsändarens e-post visas ett meddelande i iFrame-fönstret, enligt nedan. Användaren får också ett e-postmeddelande med instruktioner om hur kontot aktiveras.
+
+   ![](images/iFrame-registration-message.png)
+
+   ![](images/iFrame-confirm-email.png)
+
+   Om *Etablera Sign-användare automatiskt* är inaktiverad, Adobe Sign-användargenerering misslyckas och i iFrame-fönstret visas ett meddelande där användaren uppmanas att kontakta sin Adobe Sign-kontoadministratör. Kontoadministratören för Adobe Sign kan vidta en av följande åtgärder:
+
+   * Aktivera *Etablera Sign-användare automatiskt* för kontot.
+   * Skapa användaren i Adobe Sign innan du använder VEVA Vault Adobe Sign Integration.
+
+   ![](images/iFrame-contact-administrator.png)
 
 1. När dokumentet har bearbetats drar och släpper du signaturfälten på den högra panelen och väljer **[!UICONTROL Skicka]**.
 
    ![](images/add-signature-fields.png)
 
-1. Det skickar dokumentet till mottagaren för signering. När mottagaren tar emot e-postmeddelandet ändras dokumentets status från [!UICONTROL Granskad] till [!UICONTROL Underteckna i Adobe].
+1. Dokumentet skickas till mottagaren för signering. När mottagaren tar emot dokumentets e-postadress ändras dokumentstatusen från [!UICONTROL Granskad] till [!UICONTROL Signering i Adobe].
 
    ![](images/in-adobe-signing.png)
 
-1. När alla signaturer har hämtats och slutförts i Adobe Sign ändras dokumentstatusen i Valv till [!UICONTROL Godkänd].
+1. När alla signaturer har samlats in och slutförts i Adobe Sign ändras dokumentstatusen i Vault till [!UICONTROL Approved].
 
-1. Välj **[!UICONTROL Dokumentfiler]** och utöka avsnittet **[!UICONTROL Återgivningar]** i Vabell. En ny återgivning med namnet&quot;Adobe Sign-återgivning&quot; skapas automatiskt när dokumentet har statusen Godkänd.
+1. Välj **[!UICONTROL Dokumentfiler]** och expandera **[!UICONTROL Återgivningar]** i Vault. En ny återgivning med namnet Adobe Sign-återgivning skapas automatiskt när dokumentet har statusen Godkänd.
 
    ![](images/document-files.png)
 
-1. Hämta Adobe Sign Rendition för att validera mottagarens signatur.
+1. Hämta Adobe Sign-återgivningen för att validera mottagarens signatur.
 
    ![](images/verify-signature.png)
 
 ## Avbryta ett avtal med Adobe Sign för [!DNL Veeva Vault] {#cancel-sign-vault-agreement}
 
-1. Gå till [[!DNL Veeva Vault] inloggningssidan](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar Vaults hemsida, som visas nedan.
+1. Gå till [[!DNL Veeva Vault] inloggningssida](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar startsidan för ditt valv, som visas nedan.
 
    ![](images/vault-home.png)
 
-1. Välj fliken **[!UICONTROL Bibliotek]** och markera sedan dokumentet. Dokumentstatus kan vara: [!UICONTROL I Adobe Sign Draft], [!UICONTROL I Adobe Sign Authoring] eller [!UICONTROL In Adobe Signing].
+1. Välj **[!UICONTROL Bibliotek]** och sedan markera dokumentet. Dokumentstatus kan vara: [!UICONTROL I Adobe Sign Draft], [!UICONTROL Redigera i Adobe Sign]eller [!UICONTROL Signering i Adobe].
 
    ![](images/document-adobe-sign-authoring.png)
 
@@ -122,12 +135,12 @@ Så här skickar du ett avtal med Adobe Sign for Veeva:
 
    ![](images/cancel-document.png)
 
-1. Den utlöser webbåtgärden och läser in iFrame-fönstret i [!UICONTROL Vault].
+1. Det utlöser webbåtgärden och läser in iFrame-fönstret i [!UICONTROL valv].
 
    ![](images/cancelled-document.png)
 
-1. Dokumentets status ändras automatiskt till [!UICONTROL Review].
+1. Dokumentstatusen ändras automatiskt till [!UICONTROL Granska].
 
    ![](images/cancel-reviewed.png)
 
-När dokumentstatusen har ändrats till Granska kan du skicka det igen för signatur.
+När dokumentstatusen har ändrats till Granska kan du skicka ut det för signering igen.
