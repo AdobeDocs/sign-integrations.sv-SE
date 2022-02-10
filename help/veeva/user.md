@@ -9,9 +9,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: e1394c24aebd1e026eb6c5a33935149f33ef8ea4
+source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
 workflow-type: tm+mt
-source-wordcount: '668'
+source-wordcount: '667'
 ht-degree: 2%
 
 ---
@@ -30,7 +30,7 @@ Den övergripande processen att skicka dokument för signering påminner om att 
 
 Adobe Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arbetsflödena för dokument och signaturer. Genom att använda arbetsflödet för integrering kan du
 
-* Spara tid och resurser på snigelpost, övernattning och fax.
+* Spara tid och resurser på snigelmejl, övernattning och fax.
 * Skicka kontrakt för e-signering eller godkännande från [!DNL Veeva Vault], få åtkomst till kontraktshistorik i realtid och visa sparade kontrakt.
 * Spåra erbjudandena i realtid i hela organisationen och få uppdateringar när avtal visas, signeras, avbryts eller avvisas.
 * eSign på över 20 språk och stöd för faxtjänster på 50+ platser runt hela jorden.
@@ -103,11 +103,11 @@ Så här skickar du ett avtal med Adobe Sign för Veva:
 
    ![](images/iFrame-contact-administrator.png)
 
-1. När dokumentet har bearbetats drar och släpper du signaturfälten på den högra panelen och väljer **[!UICONTROL Skicka]**.
+1. När dokumentet har bearbetats drar och släpper du signaturfälten från den högra panelen och väljer **[!UICONTROL Skicka]**.
 
    ![](images/add-signature-fields.png)
 
-1. Dokumentet skickas till mottagaren för signering. När mottagaren tar emot dokumentets e-postadress ändras dokumentstatusen från [!UICONTROL Granskad] till [!UICONTROL Signering i Adobe].
+1. Dokumentet skickas till mottagarna för signering. När mottagaren tar emot dokumentets e-postadress ändras dokumentstatusen från [!UICONTROL Granskad] till [!UICONTROL Signering i Adobe].
 
    ![](images/in-adobe-signing.png)
 

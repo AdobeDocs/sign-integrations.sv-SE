@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: f647d0573f3e44f5a7e7997a309a8d18886959be
+source-git-commit: f460f23ac3e412b527a91668561fff48ac518941
 workflow-type: tm+mt
-source-wordcount: '3317'
+source-wordcount: '3319'
 ht-degree: 2%
 
 ---
@@ -27,7 +27,7 @@ I det här dokumentet beskrivs hur du skapar en integrering av Adobe Sign med [!
 
 De viktigaste stegen för att slutföra integreringen är:
 
-* Aktivera ditt administratörskonto i Adobe Sign (endast nya kunder)
+* Aktivera ditt administratörskonto i Adobe Sign (endast nya kunder).
 * Skapa objekt för att spåra historiken för en avtalslivscykel i Vault.
 * Skapa en ny säkerhetsprofil.
 * Konfigurera en grupp i Adobe Sign för att hålla [!DNL Veeva Vault] integrationsanvändare.
@@ -41,7 +41,7 @@ De viktigaste stegen för att slutföra integreringen är:
 
 ## Konfigurera [!DNL Veeva Vault] {#configure-veeva}
 
-Konfigurera [!DNL Veeva Vault] För integrering med Adobe Sign måste du utföra följande steg:
+Konfigurera [!DNL Veeva Vault] för integrering med Adobe Sign måste du implementera stegen nedan.
 
 ### Steg 1. Skapa grupp {#create-group}
 
@@ -194,7 +194,7 @@ När livscykeln/livscyklerna har konfigurerats korrekt bör systemet säkerstäl
 
 ![Bild av konfiguration av användarroll](images/user-role-setup.png)
 
-**Obs!** Om inställningsobjektet för användarroll inte innehåller det fält som refererar till objektet Dokumenttypgrupp, måste du lägga till fältet. För att göra det går du till Objekt > Inställningar för användarroll > Fält och slutför de nödvändiga stegen, som visas i bilden nedan.
+**Obs!** Om inställningsobjektet för användarroll inte innehåller det fält som refererar till objektet Dokumenttypgrupp, måste du lägga till fältet. Gå till **[!UICONTROL Objekt]** > **[!UICONTROL Inställning av användarroll]** > **[!UICONTROL Fält]** och utför de steg som krävs enligt bilden nedan.
 
 ![Bild av konfiguration av användarroll](images/create-setup-field.png)
 
@@ -209,13 +209,13 @@ Om du vill integrera med Adobe Sign måste du använda två nya dokumentfält:
 
 Så här ställer du in dokumentfält:
 
-1. Gå till fliken Konfiguration och välj **Dokumentfält** > **Delade fält**.
-1. I fältet Visa avsnitt väljer du Skapa visningsavsnitt och tilldelar Adobe-signatur som avsnittsetikett.
+1. Gå till fliken Konfiguration och välj **[!UICONTROL Dokumentfält]** > **[!UICONTROL Delade fält]**.
+1. I fältet Visa avsnitt väljer du **[!UICONTROL Skapa visningsavsnitt]** och tilldela **[!UICONTROL Adobe-signatur]** som avsnittsetiketten.
 
    ![Bild av dokumentdetaljer](images/create-display-section.png)
 
-1. För de två dokumentfälten som delas (signature__c och allow_adobe_sign_user_actions__c) uppdaterar du gränssnittsavsnittet med avsnittsetiketten Adobe-signatur.
-1. Lägg till de tre delade fälten i alla dokumenttyper som är berättigade till Adobe-signatur. Om du vill göra det väljer du på sidan Basdokument **Lägg till** > **Befintligt delat fält** från det övre högra hörnet.
+1. För de två delade dokumentfälten (signature__c och allow_adobe_sign_user_actions__c) uppdaterar du gränssnittsavsnittet med **[!UICONTROL Adobe-signatur]** som avsnittsetiketten.
+1. Lägg till de tre delade fälten i alla dokumenttyper som är berättigade till Adobe-signatur. För att göra det väljer du på sidan Basdokument **[!UICONTROL Lägg till]** > **[!UICONTROL Befintligt delat fält]** från det övre högra hörnet.
 
    ![Bild av dokumentdetaljer](images/add-existing-fields.png)
 
@@ -225,13 +225,13 @@ Så här ställer du in dokumentfält:
 
    ![Bild av dokumentdetaljer](images/security-overrides.png)
 
-1. Administratörer måste lägga till det befintliga delade fältet *Inaktivera vaultövertäckningar (disable_vault_overlays__v)* och ställ in det på Aktiv för alla dokumenttyper som kan signeras med Adobe. Alternativt kan fältet ha en specifik säkerhetsuppdatering som endast tillåter medlemmar i Adobe Sign administratörsgrupp att uppdatera dess värde.
+1. Administratörer måste lägga till det befintliga delade fältet *Inaktivera vaultövertäckningar (disable_vault_overlays__v)* och ställa in den på **[!UICONTROL Aktiv]** för alla dokumenttyper som är berättigade till Adobe-signatur. Alternativt kan fältet ha en specifik säkerhetsuppdatering som endast tillåter medlemmar i Adobe Sign administratörsgrupp att uppdatera dess värde.
 
    ![Bild av åtgärder för att tillåta Adobe Sign-användare](images/allow-adobe-sign-user-actions.png)
 
 ### Steg 8. Deklarera dokumentåtergivningar {#declare-renditions}
 
-Den nya återgivningstypen *Adobe Sign-återgivning (adobe_sign_rendition__c) används av vaultintegreringen för att överföra signerade PDF-dokument till Adobe Sign. Adobe Sign-återgivningen ska deklareras för varje dokumenttyp som kan signeras av Adobe.
+Den nya återgivningstypen anropas *Adobe Sign-återgivning (adobe_sign_rendition__c)* används av Vault-integrering för att överföra signerade PDF-dokument till Adobe Sign. Du måste deklarera Adobe Sign-återgivningen för varje dokumenttyp som är berättigad till Adobe-signatur.
 
 ![Bild av återgivningstyper](images/rendition-type.png)
 
@@ -255,22 +255,20 @@ För integrering med Adobe Sign och Vault måste du skapa och konfigurera följa
 
 ### Steg 10. Uppdatera dokumentets livscykel {#document-lifecycle}
 
-För varje dokumenttyp som är berättigad till Adobe-signatur måste motsvarande dokumentlivscykel uppdateras genom att nya livscykelroller och tillstånd läggs till.
+För varje dokumenttyp som är berättigad till Adobe-signatur måste du uppdatera motsvarande dokumentlivscykel genom att lägga till en ny livscykelroll och nya tillstånd.
 
 Livscykeln för Adobe Sign-avtal har följande tillstånd:
 
-    * UTKAST
-    * AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED
-    * OUT_FOR_SIGNATURE eller OUT_FOR_APPROVAL
-    * SIGNERAT eller GODKÄNT
-    * AVBRUTEN
-    * UTGÅNGEN
+* UTKAST
+* AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED
+* OUT_FOR_SIGNATURE eller OUT_FOR_APPROVAL
+* SIGNERAT eller GODKÄNT
+* AVBRUTEN
+* FÖRFALLEN
 
 Följ stegen nedan för att uppdatera dokumentets livscykel:
 
-1. Lägg till livscykelroll
-
-   Adobe Sign administratörsprogramroll måste läggas till i alla livscykler som används av dokument som är berättigade till Adobe-signatur, enligt nedan.
+1. Lägg till livscykelroll. Adobe Sign administratörsprogramroll måste läggas till i alla livscykler som används av dokument som är berättigade till Adobe-signatur, enligt nedan.
 
    ![Bild av roller som livscykeladministratör](images/document-lifecycle-admin-role.png)
 
@@ -281,27 +279,32 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
 
    ![Bild av delningsregel i Adobe Sign](images/adobe-sign-sharing-rule.png)
 
-2. Skapa livscykeltillstånd. Gå till **Inställningar** > **Konfiguration** > **Dokumentlivscykler** > **Allmänna livscykler** > **Stater** > **Skapa**. Skapa sedan följande lägen:
+2. Skapa livscykeltillstånd. Gå till **[!UICONTROL Inställningar]** > **[!UICONTROL Konfiguration]** > **[!UICONTROL Dokumentlivscykler]** > **[!UICONTROL Allmänna livscykler]** > **[!UICONTROL Stater]** > **[!UICONTROL Skapa]**. Skapa sedan följande lägen:
 
    * I Adobe Sign Draft
-      ![Bild av delningsregel i Adobe Sign](images/create-draft-state.png)
+
+   ![Bild av delningsregel i Adobe Sign](images/create-draft-state.png)
+
    * Redigera i Adobe Sign
-      ![Bild av delningsregel i Adobe Sign](images/create-authoring-state.png)
+
+   ![Bild av delningsregel i Adobe Sign](images/create-authoring-state.png)
+
    * Signering i Adobe
-      ![Bild av delningsregel i Adobe Sign](images/create-signing-state.png)
+
+   ![Bild av delningsregel i Adobe Sign](images/create-signing-state.png)
 
 3. Lägg till användaråtgärder i nedanstående lista.
 
    När ett Vault-dokument skickas till Adobe Sign ska dess tillstånd motsvara läget i vilket avtalet finns. Gör det genom att lägga till följande lägen i varje livscykel som används av dokument som är berättigade till Adobe-signatur:
 
-* **Före Adobe-underskrift** (Granskad): Det här är ett platshållarnamn för läget som dokumentet kan skickas från till Adobe Sign. Beroende på dokumenttyp kan det vara Utkast eller Granskat. Etiketten för dokumentstatus kan anpassas enligt kundens krav. Före Adobe måste signaturtillståndet definiera följande två användaråtgärder:
+   * **Före Adobe-underskrift** (Granskad): Det här är ett platshållarnamn för läget som dokumentet kan skickas från till Adobe Sign. Beroende på dokumenttyp kan det vara Utkast eller Granskat. Etiketten för dokumentstatus kan anpassas enligt kundens krav. Före Adobe måste signaturtillståndet definiera följande två användaråtgärder:
 
    * Åtgärd som ändrar dokumentstatus till *I Adobe Sign Draft* tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * En åtgärd som kallar webbåtgärden &quot;Adobe Sign&quot;. Tillståndet måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra tillstånd.
 
-      ![Bild av livscykelsteg 1](images/lifecycle-state1.png)
+   ![Bild av livscykelsteg 1](images/lifecycle-state1.png)
 
-* **I Adobe Sign Draft**: Det här är ett platshållarnamn för läget som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget UTKAST. Det är ett nödvändigt tillstånd. Detta tillstånd måste definiera följande fem användaråtgärder:
+   * **I Adobe Sign Draft**: Det här är ett platshållarnamn för läget som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget UTKAST. Det är ett nödvändigt tillstånd. Detta tillstånd måste definiera följande fem användaråtgärder:
 
    * Åtgärd som ändrar dokumentstatus till *Redigera i Adobe Sign* tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentstatus till *I signeringsläget Adobe*. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
@@ -309,18 +312,18 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
    * En åtgärd som kallar webbåtgärden &quot;Adobe Sign&quot;.
    * En åtgärd som kallar webbåtgärden för Avbryt Adobe Sign. Tillståndet måste ha en säkerhet som gör att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra tillstånd.
 
-      ![Bild av livscykelsteg 2](images/lifecycle-state2.png)
+   ![Bild av livscykelsteg 2](images/lifecycle-state2.png)
 
-* **Redigera i Adobe Sign**: Det här är ett platshållarnamn för läge som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED. Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fyra användaråtgärder definierade:
+   * **Redigera i Adobe Sign**: Det här är ett platshållarnamn för läge som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED. Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fyra användaråtgärder definierade:
 
    * Åtgärd som ändrar dokumentets status till Adobe Sign avbrutet. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentets status till Signeringsläge i Adobe. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som kallar webbåtgärden &quot;Adobe Sign&quot;
    * En åtgärd som kallar webbåtgärden för Avbryt Adobe Sign. Tillståndet måste ha en säkerhet som gör att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra tillstånd.
 
-      ![Bild av livscykelsteg 3](images/lifecycle-state3.png)
+   ![Bild av livscykelsteg 3](images/lifecycle-state3.png)
 
-* **Signering i Adobe**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Sign och att dess avtal redan har skickats till deltagare (tillståndet OUT_FOR_SIGNATURE eller OUT_FOR_APPROVAL). Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fem användaråtgärder definierade:
+   * **Signering i Adobe**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Sign och att dess avtal redan har skickats till deltagare (tillståndet OUT_FOR_SIGNATURE eller OUT_FOR_APPROVAL). Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fem användaråtgärder definierade:
 
    * Åtgärd som ändrar dokumentets status till Adobe Sign avbrutet. Måltillståndet för den här åtgärden kan vara vilket kundbehov som än finns och det kan vara olika för olika typer. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
    * Åtgärd som ändrar dokumentstatus till Adobe Sign avvisat läge. Måltillståndet för den här åtgärden kan vara vilket kundbehov som än finns och det kan vara olika för olika typer. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
@@ -328,14 +331,14 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
    * Åtgärd som anropar webbåtgärden *Adobe Sign*.
    * Åtgärd som anropar Web Action *Avbryt Adobe Sign*. Tillståndet måste ha en säkerhet som gör att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra tillstånd.
 
-      ![Bild av livscykelsteg 4](images/lifecycle-state4.png)
+   ![Bild av livscykelsteg 4](images/lifecycle-state4.png)
 
-* **Adobe undertecknat (godkänt)**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Sign och att dess avtal har slutförts (läget SIGNERAT eller GODKÄNT). Det är ett obligatoriskt steg och det kan vara ett befintligt livscykelsteg, som Godkänt.
-Detta tillstånd kräver inte användaråtgärder. Tillståndet måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll och redigera fält.
+   * **Adobe undertecknat (godkänt)**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Sign och att dess avtal har slutförts (läget SIGNERAT eller GODKÄNT). Det är ett obligatoriskt steg och det kan vara ett befintligt livscykelsteg, som Godkänt.
+Detta tillstånd kräver inte användaråtgärder. Det måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll och redigera fält.
 
-I följande diagram visas mappningarna mellan Adobe Sign-avtal och Vaults dokumenttillstånd, där tillståndet &quot;Före Adobe-signatur&quot; är Utkast.
+   I följande diagram visas mappningarna mellan Adobe Sign-avtal och Vaults dokumenttillstånd, där tillståndet &quot;Före Adobe-signatur&quot; är Utkast.
 
-![Bild av Adobe Sign Vault-mappningar](images/sign-vault-mappings.png)
+   ![Bild av Adobe Sign Vault-mappningar](images/sign-vault-mappings.png)
 
 ### Steg 11. Lägg till Adobe Sign-scenen i den allmänna livscykeln i livscykelstegsgrupper
 
