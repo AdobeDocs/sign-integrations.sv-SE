@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: db0d9022e520e9db39254e78b66aab8b913f353a
+source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
 workflow-type: tm+mt
-source-wordcount: '3169'
+source-wordcount: '3428'
 ht-degree: 3%
 
 ---
@@ -125,13 +125,51 @@ Signaturhändelseobjektet skapas för att lagra ett avtals händelserelaterad in
 | participant_role__c | Deltagarroll | Sträng | Innehar Adobe Sign-deltagarens roll |
 | signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
 
-![Bild av information om signaturhändelse](images/signature-event-object-details.png)
+![Bild](images/signature-event-object-details.png)
 
 #### Process Locker-objekt {#process-locker}
 
 Ett Process Locker-objekt skapas för att låsa Adobe Sign-integreringsprocessen. Inga anpassade fält krävs.
 
 ![Bild av information om signaturhändelse](images/process-locker-details.png)
+
+Egenskapen Granska dataändringar för det här objektet är aktiverad som standard för signatur-, signatur-, signatur-, händelse- och Process Locker-objekten som ingår i distributionspaketet.
+
+**Obs!** Om du vill ta med ändringar i vault-fångstobjektposten i granskningsloggarna aktiverar du inställningen Granska dataändringar . Den här inställningen är Av som standard. När du har aktiverat den här inställningen och skapat poster kan du inte inaktivera den. Om den här inställningen är av och det finns poster, kan bara en vaultägare uppdatera inställningen.
+
+#### **Visa deltagare och historik för signaturobjektet** {#display-participants-history}
+
+Signaturobjektet som ingår i distributionspaketet levereras med [Sidlayout för signaturinformation](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c). Sidlayouten innehåller avsnitt för Deltagare och Historik.
+
+* Den *Deltagare* i avsnittet Relaterade objekt som är konfigurerat enligt bilden nedan.
+
+   ![Bild](images/edit-related-objects.png)
+
+* Du kan redigera de kolumner som ska visas för deltagarna, enligt nedan.
+
+   ![Bild](images/set-columns-to-display.png)
+
+* Den *Historik* i avsnittet Relaterade objekt som är konfigurerat enligt bilden nedan.
+
+   ![Bild](images/edit-related-object-in-history.png)
+
+* Du kan redigera de kolumner som ska visas för historiken enligt nedan.
+
+   ![Bild](images/select-columns-to-display.png)
+
+#### **Visa deltagare och granskningshistorik för Adobe Sign-dokumentet** {#view-participants-audit-history}
+
+* Om du vill visa deltagare och granskningshistorik för Adobe Sign-dokumentet markerar du länken i dokumentets Adobe-signatur.
+
+   ![Bild](images/view-participants-audit-history.png)
+
+* På sidan som öppnas visas Deltagare och historik för Adobe Sign-dokumentet enligt nedan.
+
+   ![Bild](images/participants-and-history.png)
+
+* Se ljudspåret för signatur som visas nedan.
+
+   ![Bild](images/audit-trail.png)
 
 ### Steg 3. Konfigurera säkerhetsprofiler {#security-profiles}
 
