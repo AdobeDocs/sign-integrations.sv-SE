@@ -10,9 +10,9 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 535c4510e876c708679d7f6a800206264a9876e2
+source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3431'
 ht-degree: 3%
 
 ---
@@ -135,7 +135,7 @@ Ett Process Locker-objekt skapas för att låsa Adobe Sign-integreringsprocessen
 
 Egenskapen Granska dataändringar för det här objektet är aktiverad som standard för signatur-, signatur-, signatur-, händelse- och Process Locker-objekten som ingår i distributionspaketet.
 
-**Obs!** Om du vill ta med ändringar i vault-fångstobjektposten i granskningsloggarna aktiverar du inställningen Granska dataändringar . Den här inställningen är Av som standard. När du har aktiverat den här inställningen och skapat poster kan du inte inaktivera den. Om den här inställningen är av och det finns poster, kan bara en vaultägare uppdatera inställningen.
+**Obs!** Du kan ändra data i vault-hämtningsobjektposter i granskningsloggar genom att aktivera inställningen för Granska dataändringar . Den här inställningen är inaktiverad som standard. När du har aktiverat den här inställningen och skapat poster kan du inte längre inaktivera den. Om den här inställningen är av och det finns poster, kan bara en vaultägare uppdatera inställningen.
 
 #### **Visa deltagare och historik för signaturobjektet** {#display-participants-history}
 
@@ -167,7 +167,7 @@ Signaturobjektet som ingår i distributionspaketet levereras med [Sidlayout för
 
    ![Bild](images/participants-and-history.png)
 
-* Se ljudspåret för signatur som visas nedan.
+* Visa granskningsspåret för signaturen enligt nedan.
 
    ![Bild](images/audit-trail.png)
 
