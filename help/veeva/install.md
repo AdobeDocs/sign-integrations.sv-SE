@@ -1,6 +1,6 @@
 ---
-title: '[!DNL Veeva Vault] Installationshandbok'
-description: Installationsguide för att aktivera Adobe Sign-integrering med Veva
+title: '"[!DNL Veeva Vault] Installationshandbok"'
+description: Installation guide for enabling the Adobe Sign integration with Veeva
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
 content-type: reference
@@ -10,7 +10,7 @@ solution: Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 928bbadab28f041de2d8bc17ad8383f61033a6c0
+source-git-commit: 04a3e58da81c1a034318807776077d0076eec85f
 workflow-type: tm+mt
 source-wordcount: '3431'
 ht-degree: 3%
@@ -56,17 +56,17 @@ Så här konfigurerar du Adobe Sign för [!DNL Vault], en ny grupp med namnet *A
 
 * Anpassade objekt: Signaturobjekt, Signaturobjekt, Signaturhändelseobjekt, Process Locker-objekt
 * Sidlayout för signaturobjekt
-* Layout för signaturhändelseobjekt
+* Signature Event object page layout
 * Layout för signeringsobjektssida
-* Layout för processvalvsobjektssida
+* Process Locker object page layout
 * Adobe Sign-återgivningstyp
-* Delad fältsignatur__c , allow_adobe_sign_user_actions__c
+* Shared field signature__c , allow_adobe_sign_user_actions__c
 * Adobe Sign Web Action
 * Avbryt Adobe Sign-webbåtgärd
 * Behörighetsuppsättning för Adobe Sign-administratörsåtgärder
 * Säkerhetsprofil för Adobe Sign-integrationsprofil
 * Programroll Adobe Sign-administratörsroll
-* Dokumenttypgruppen &quot;Adobe Sign-dokument&quot;
+* Document type group &#39;Adobe Sign Document&#39;
 
 #### Signaturobjekt {#signature-object}
 
@@ -78,9 +78,9 @@ Signaturobjekt skapas för att lagra avtalsrelaterad information. Ett signaturob
 | --- | --- | ---| --- | 
 | external_id__c | Avtals-ID | Sträng (100) | Innehåller Adobe Sign unika avtals-ID |
 | file_hash__c | Filhash | Sträng (50) | Innehåller md5-kontrollsumman för filen som har skickats till Adobe Sign |
-| name__v | Namn | Sträng (128) | Innehåller avtalsnamnet |
-| sender__c | Avsändare | Objekt (användare) | Innehåller referensen till den Vault-användare som har skapat avtalet |
-| signature_status__c | Signaturstatus | Sträng (75) | Innehåller avtalets status i Adobe Sign |
+| name__v | Namn | String (128) | Holds the agreement name |
+| sender__c | Avsändare | Objekt (användare) | Holds the reference to the Vault user that has created the agreement |
+| signature_status__c | Signaturstatus | Sträng (75) | Holds the agreement’s status in Adobe Sign |
 | signature_type__c | Signaturtyp | Sträng (20) | Innehåller avtalets signaturtyp i Adobe Sign (SKRIFTLIG eller ESIGN) |
 | start_date__c | Startdatum | DatumTid | Datum när avtalet har skickats för signering |
 | cancellation_date__c | Uppsägningsdatum | DatumTid | Innehåller datumet då avtalet har annullerats. |
@@ -91,9 +91,9 @@ Signaturobjekt skapas för att lagra avtalsrelaterad information. Ett signaturob
 
 #### Signatory-objekt {#signatory-object}
 
-Signeringsobjekt skapas för att lagra information relaterad till deltagarna i ett avtal. Den innehåller information under följande specifika fält:
+Signatory object is created to store information related to the participants in an agreement. Den innehåller information under följande specifika fält:
 
-**Fält för signeringsobjekt**
+**Signatory object fields**
 
 | Fält | Etikett | Typ | Beskrivning |
 | --- | --- | ---| --- | 
@@ -104,7 +104,7 @@ Signeringsobjekt skapas för att lagra information relaterad till deltagarna i e
 | role__c | Roll | Sträng (30) | Innehåller Adobe Sign-avtalsdeltagarens roll |
 | signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
 | signature_status__c | Signaturstatus | Sträng (100) | Innehåller status för Adobe Sign-avtalsdeltagare |
-| user__c | Användare | Objekt (användare) | Innehåller referensen till undertecknarens användarpost om deltagaren är en vaultanvändare |
+| user__c | Användare | Object (User) | Innehåller referensen till undertecknarens användarpost om deltagaren är en vaultanvändare |
 
 ![Bild på undertecknarinformation](images/signatory-object-details.png)
 
@@ -127,9 +127,9 @@ Signaturhändelseobjektet skapas för att lagra ett avtals händelserelaterad in
 
 ![Bild](images/signature-event-object-details.png)
 
-#### Process Locker-objekt {#process-locker}
+#### Process Locker object {#process-locker}
 
-Ett Process Locker-objekt skapas för att låsa Adobe Sign-integreringsprocessen. Inga anpassade fält krävs.
+A Process Locker object is created to lock the Adobe Sign integration process. Inga anpassade fält krävs.
 
 ![Bild av information om signaturhändelse](images/process-locker-details.png)
 
@@ -137,9 +137,9 @@ Egenskapen Granska dataändringar för det här objektet är aktiverad som stand
 
 **Obs!** Du kan ändra data i vault-hämtningsobjektposter i granskningsloggar genom att aktivera inställningen för Granska dataändringar . Den här inställningen är inaktiverad som standard. När du har aktiverat den här inställningen och skapat poster kan du inte längre inaktivera den. Om den här inställningen är av och det finns poster, kan bara en vaultägare uppdatera inställningen.
 
-#### **Visa deltagare och historik för signaturobjektet** {#display-participants-history}
+#### **Display Participants and History for the Signature Object** {#display-participants-history}
 
-Signaturobjektet som ingår i distributionspaketet levereras med [Sidlayout för signaturinformation](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c). Sidlayouten innehåller avsnitt för Deltagare och Historik.
+Signaturobjektet som ingår i distributionspaketet levereras med [Sidlayout för signaturinformation](https://vvtechpartner-adobe-rim.veevavault.com/ui/#admin/content_setup/object_schema/pagelayout?t=signature__c&amp;d=signature_detail_page_layout__c). The Page Layout has sections for Participants and History.
 
 * Den *Deltagare* i avsnittet Relaterade objekt som är konfigurerat enligt bilden nedan.
 
@@ -227,12 +227,12 @@ När livscykeln/livscyklerna har konfigurerats korrekt bör systemet säkerstäl
 
 ![Bild av konfiguration av användarroll](images/user-role-setup.png)
 
-### Steg 7. Ställ in dokumentfält {#create-fields}
+### Steg 7. Setup Document Fields {#create-fields}
 
-Paketdistributionen skapar följande två nya delade dokumentfält som krävs för att upprätta integreringen:
+The package deployment creates following two new shared document fields that are required for establishing the integration:
 
-* Underskrift (underskrift__c)
-* Tillåt användaråtgärder för Adobe Sign (allow_adobe_sign_user_actions__c)
+* Signature (signature__c)
+* Allow Adobe Sign user actions (allow_adobe_sign_user_actions__c)
 
 ![Bild](images/2-document-fields.png)
 
@@ -244,7 +244,7 @@ Så här ställer du in dokumentfält:
    ![Bild](images/create-display-section.png)
 
 1. För de två delade dokumentfälten (signature__c och allow_adobe_sign_user_actions__c) uppdaterar du gränssnittsavsnittet med **[!UICONTROL Adobe-signatur]** som avsnittsetiketten.
-1. Lägg till de tre delade fälten i alla dokumenttyper som är berättigade till Adobe-signatur. För att göra det väljer du på sidan Basdokument **[!UICONTROL Lägg till]** > **[!UICONTROL Befintligt delat fält]** från det övre högra hörnet.
+1. Lägg till de tre delade fälten i alla dokumenttyper som är berättigade till Adobe-signatur. To do so, in the Base Dcoument page, select **[!UICONTROL Add]** > **[!UICONTROL Existing Shared Field]** from the top right corner.
 
    ![Bild](images/create-document-fields.png)
 
@@ -256,7 +256,7 @@ Så här ställer du in dokumentfält:
 
    ![Bild](images/security-overrides.png)
 
-Inaktivera vaultövertäckningar (disable_vault_overlays__v) är ett befintligt delat fält. Alternativt kan fältet ha en specifik säkerhetsuppdatering som endast tillåter medlemmar i Adobe Sign administratörsgrupp att uppdatera dess värde.
+Inaktivera vaultövertäckningar (disable_vault_overlays__v) är ett befintligt delat fält. Optionally, the field can have a specific security that allows only members of Adobe Sign Admin group to update its value.
 
 ### Steg 8. Deklarera dokumentåtergivningar {#declare-renditions}
 
@@ -335,15 +335,15 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
 
    * **I Adobe Sign Draft**: Det här är ett platshållarnamn för läget som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget UTKAST. Det är ett nödvändigt tillstånd. Detta tillstånd måste definiera följande fem användaråtgärder:
 
-      * Åtgärd som ändrar dokumentstatus till *Redigera i Adobe Sign* tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
-      * Åtgärd som ändrar dokumentstatus till *I signeringsläget Adobe*. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
+      * Åtgärd som ändrar dokumentstatus till *Redigera i Adobe Sign* tillstånd. The name of this user action must be the same for all document types for any lifecycle. If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
+      * Åtgärd som ändrar dokumentstatus till *I signeringsläget Adobe*. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. If necessary, the criteria for this action can be set to “Allow Adobe Sign user actions equals Yes”.
       * Åtgärd som ändrar dokumentstatus till *Adobe Sign har avbrutits* tillstånd. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper i alla livscykler. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
-      * En åtgärd som kallar webbåtgärden &quot;Adobe Sign&quot;.
-      * En åtgärd som kallar webbåtgärden för Avbryt Adobe Sign. Tillståndet måste ha en säkerhet som gör att Adobe Sign-administratörsrollen kan: visa dokument, visa innehåll, redigera fält, redigera relationer, hämta källa, hantera visningsbar återgivning och ändra tillstånd.
+      * Action that calls the Web Action ‘Adobe Sign’ .
+      * En åtgärd som kallar webbåtgärden för Avbryt Adobe Sign. This state must have security that allowsAdobe Sign Admin role to: view document, view content, edit fields, edit relationships, download source, manage viewable rendition, and change state.
 
-      ![Bild av livscykelsteg 2](images/lifecycle-state2.png)
+      ![Image of lifecycle state 2](images/lifecycle-state2.png)
 
-   * **Redigera i Adobe Sign**: Det här är ett platshållarnamn för läge som anger att dokumentet redan har överförts till Adobe Sign och att dess avtal är i läget AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED. Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fyra användaråtgärder definierade:
+   * **In Adobe Sign Authoring**: This is a placeholder name for state that indicates that the document is already uploaded to Adobe Sign and that its agreement is in AUTHORING or DOCUMENTS_NOT_YET_PROCESSED state. Det är ett nödvändigt tillstånd. Detta tillstånd måste ha följande fyra användaråtgärder definierade:
 
       * Åtgärd som ändrar dokumentets status till Adobe Sign avbrutet. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
       * Åtgärd som ändrar dokumentets status till Signeringsläge i Adobe. Namnet på den här användaråtgärden måste vara detsamma för alla dokumenttyper oavsett livscykel. Om det behövs kan villkor för den här åtgärden ställas in på &quot;Tillåt Adobe Sign-användaråtgärder är lika med Ja&quot;.
@@ -423,7 +423,7 @@ En Adobe Sign-kontoadministratör måste följa stegen nedan för att ansluta [!
 
 1. Välj **[!UICONTROL Validera]** för att validera kontouppgifterna.
 
-   När valideringen är klar visas ett meddelande om att användaren har validerats, enligt nedan.
+   On successful validation, you see a &#39;User validated successfully&#39; notification, as shown below.
 
    ![Bild](images/middleware_validated.png)
 
