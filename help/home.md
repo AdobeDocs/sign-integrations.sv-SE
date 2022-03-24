@@ -1,27 +1,27 @@
 ---
-title: Adobe Sign Integrations
-description: Lär dig hur du konfigurerar Adobe Sign Integrations
+title: Adobe Sign-integreringar
+description: Lär dig konfigurera Adobe Sign-integreringar
 audience: External
 products: Adobe Sign
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: b2fa280d-894c-47da-bbf5-8b4d0c6b6165
-source-git-commit: 27610773d47a947dbfa1deb3f594667406a9aefb
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
-source-wordcount: '127'
-ht-degree: 25%
+source-wordcount: '121'
+ht-degree: 26%
 
 ---
 
-# Adobe Sign Integrations {#home}
+# Adobe Sign-integreringar {#home}
 
-![banderoll](images/sign-banner.png)
+![banner](images/sign-banner.png)
 
-Lär dig hur du installerar, integrerar och använder [!DNL Adobe Sign]-lösningar i organisationens befintliga system, processer och program.
+Lär dig hur du installerar, integrerar och använder [!DNL Adobe Sign] lösningar för befintliga system, processer och applikationer i organisationen.
 
-## Artiklar
+## Aktuella artiklar
 
 <table style="table-layout:fixed">
 <tr>
@@ -42,16 +42,16 @@ Lär dig hur du installerar, integrerar och använder [!DNL Adobe Sign]-lösning
     <div>
     <a href="workday/tutorial-video.md"><strong>Integrera Adobe Sign med [!DNL Workday]</strong></a>
     </div>
-    <em>Lär dig hur du konfigurerar Adobe Sign så att det fungerar i [!DNL Workday] för hantering av alla dina dokument</em>
+    <em>Lär dig konfigurera Adobe Sign så att det fungerar i [!DNL Workday] för att hantera alla dina dokument</em>
   </td>
   <td>
     <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all">
-    <img alt="Adobe Sign Support Community" src="images/sign-forum.png"/>
+    <img alt="Adobe Sign supportforum" src="images/sign-forum.png"/>
     </a>
     <div>
-    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign Support Community</strong></a>
+    <a href="https://community.adobe.com/t5/adobe-sign/bd-p/adobe-sign?page=1&amp;sort=latest_replies&amp;filter=all"><strong>Adobe Sign supportforum</strong></a>
     </div>
-    <em>Ställ frågor, dela feedback och tips eller diskutera produkter och tjänster för Sign-integrering med andra Adobe Sign-användare och -entusiaster.</em>
+    <em>Ställ frågor, dela feedback och tips eller diskutera om Sign-integreringsprodukter och -tjänster med andra Adobe Sign-användare och -entusiaster.</em>
     <br>
   </td>
 </tr>

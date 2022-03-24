@@ -1,27 +1,27 @@
 ---
-title: Nyheter i Sign Integrations Guide
+title: Nyheter i integreringsguiden för Sign
 description: Lista över nya artiklar och betydande ändringar.
-landing-page-description: Dessa metadata är till för en landningssida.
+landing-page-description: Dessa metadata gäller för en landningssida.
 exl-id: 204e5f43-59f6-4200-a9b7-6f67ecd32c4d
 products: Adobe Sign
 type: Documentation
-solution: Adobe Sign
+solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
-source-git-commit: 7f81ef456437c32eb4642ae54d323a41f39af7bc
+source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 2%
 
 ---
 
-# Nyheter i Adobe Sign Integrations {#new}
+# Nyheter i Adobe Sign-integreringar {#new}
 
-Den här sidan innehåller information om de senaste tilläggen till den här handboken.
+Den här sidan innehåller information om de senaste tilläggen till den här guiden.
 
 ## Juni 2021
 
-* Lade till [!DNL Salesforce Work.com]
-* Introduktion till [!DNL Live Sign]-funktionen för [!DNL Microsoft Teams]
+* Tillagd [!DNL Salesforce Work.com]
+* Introduktion [!DNL Live Sign] funktion för [!DNL Microsoft Teams]
 
 
