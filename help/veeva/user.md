@@ -9,7 +9,7 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -56,7 +56,7 @@ Så här skickar du ett avtal med Adobe Acrobat Sign för Veva:
 
    ![](images/choose-document-type.png)
 
-1. Välj **[!UICONTROL OK]** för att stänga dialogrutan.
+1. Stäng dialogrutan genom att välja **[!UICONTROL OK]**.
 
 1. Välj **[!UICONTROL Nästa]**.
 
@@ -117,7 +117,7 @@ Så här skickar du ett avtal med Adobe Acrobat Sign för Veva:
 
 1. När alla signaturer har samlats in och slutförts i Adobe Acrobat Sign ändras dokumentstatusen i Vault till [!UICONTROL Approved].
 
-1. Välj **[!UICONTROL Dokumentfiler]** och expandera **[!UICONTROL Återgivningar]** i Vault. En ny återgivning med namnet Adobe Sign-återgivning skapas automatiskt när dokumentet har statusen Godkänd.
+1. Välj **[!UICONTROL Dokumentfiler]** och expandera **[!UICONTROL Återgivningar]** i Vault. En återgivning med namnet Adobe Sign-återgivning skapas automatiskt när dokumentet har statusen Godkänd.
 
    ![](images/document-files.png)
 

@@ -10,9 +10,9 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
+source-git-commit: 2c2d7ebe427166222cc62c5ab8f867275a97cce9
 workflow-type: tm+mt
-source-wordcount: '3573'
+source-wordcount: '3568'
 ht-degree: 2%
 
 ---
@@ -42,7 +42,7 @@ De viktigaste stegen för att slutföra integreringen är:
 
 ## Konfigurera [!DNL Veeva Vault] {#configure-veeva}
 
-Konfigurera [!DNL Veeva Vault] för integrering med Adobe Acrobat Sign måste du implementera stegen nedan.
+Konfigurera [!DNL Veeva Vault] För integrering med Adobe Acrobat Sign måste du implementera stegen nedan.
 
 ### Steg 1. Skapa grupp {#create-group}
 
@@ -222,7 +222,7 @@ Du måste lägga till den här dokumenttypgruppen för alla dokumentklassificeri
 
 ### Steg 6. Skapa användarrollskonfiguration {#create-user-role-setup}
 
-När livscykeln/livscyklerna har konfigurerats korrekt bör systemet se till att Adobe Sign-administratörsanvändare läggs till av DAC för alla dokument som är berättigade till Adobe Acrobat Sign-processen. Detta görs genom att skapa rätt inställningspost för användarrollen med följande specifikationer:
+När livscyklerna har konfigurerats korrekt bör systemet se till att Adobe Sign-administratörsanvändare läggs till av DAC för alla dokument som är berättigade till Adobe Acrobat Sign-processen. Detta görs genom att skapa rätt inställningspost för användarrollen med följande specifikationer:
 
 * Dokumenttypsgrupp som Adobe Sign-dokument
 * Programroll som Adobe Sign-administratörsroll
@@ -255,7 +255,7 @@ Så här ställer du in dokumentfält:
 
    ![Bild](images/use-shared-fields.png)
 
-1. Observera att båda fälten måste ha en specifik säkerhetsuppdatering som endast tillåter medlemmar i Adobe Sign administratörsgrupp att uppdatera sina värden.
+1. Båda fälten måste ha ett specifikt säkerhetsvärde som tillåter att endast medlemmar i Adobe Sign administratörsgrupp uppdaterar sina värden.
 
    ![Bild](images/security-overrides.png)
 
