@@ -4,11 +4,11 @@ description: Installationsguide för att aktivera Adobe Sign-integrering med Sug
 product: Adobe Sign
 content-type: reference
 type: Documentation
-solution: Acrobat Sign, Adobe Sign
+solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 0512f616-568a-4b96-9bd1-48e67bc3536b
-source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
+source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '2354'
 ht-degree: 1%
