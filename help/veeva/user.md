@@ -9,26 +9,26 @@ solution: Acrobat Sign, Adobe Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: b326a9afa2c16333d390cac3b30a2c7c741a4360
+source-git-commit: 1eafeb73f7b7055fa958b15a02148898f7c9d406
 workflow-type: tm+mt
-source-wordcount: '667'
+source-wordcount: '721'
 ht-degree: 2%
 
 ---
 
-# Adobe Sign för [!DNL Veeva Vault]: Användarhandbok {#veeva-vault-user-guide}
+# Adobe Acrobat Sign för [!DNL Veeva Vault]: Användarhandbok {#veeva-vault-user-guide}
 
-[**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Acrobat Signs support**](https://adobe.com/go/adobesign-support-center_se)
 
-Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig använda Adobe Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
+Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig hur du använder Adobe Acrobat Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
 
 ## Översikt {#overview}
 
-Adobe Sign-integrering med [!DNL Veeva Vault] underlättar processen för att erhålla en signatur eller ett godkännande för all dokumentation som kräver juridiska signaturer eller granskningsbar dokumentbearbetning.
+Adobe Acrobat Sign-integrering med [!DNL Veeva Vault] underlättar processen för att erhålla en signatur eller ett godkännande för all dokumentation som kräver juridiska signaturer eller granskningsbar dokumentbearbetning.
 
 Den övergripande processen att skicka dokument för signering påminner om att skicka ett e-postmeddelande, så det är enkelt att använda för de flesta användare.
 
-Adobe Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arbetsflödena för dokument och signaturer. Genom att använda arbetsflödet för integrering kan du
+Adobe Acrobat Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arbetsflödena för dokument och signaturer. Genom att använda arbetsflödet för integrering kan du
 
 * Spara tid och resurser på snigelmejl, övernattning och fax.
 * Skicka kontrakt för e-signering eller godkännande från [!DNL Veeva Vault], få åtkomst till kontraktshistorik i realtid och visa sparade kontrakt.
@@ -36,9 +36,9 @@ Adobe Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar upp arb
 * eSign på över 20 språk och stöd för faxtjänster på 50+ platser runt hela jorden.
 * Skapa återanvändbara avtalsmallar för sändningsalternativ.
 
-## Skicka ett avtal med Adobe Sign för [!DNL Veeva Vault] {#send-sign-vault-agreement}
+## Skicka ett avtal med Adobe Acrobat Sign för [!DNL Veeva Vault] {#send-sign-vault-agreement}
 
-Så här skickar du ett avtal med Adobe Sign för Veva:
+Så här skickar du ett avtal med Adobe Acrobat Sign för Veva:
 
 1. Gå till [[!DNL Veeva Vault] inloggningssida](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar startsidan för ditt valv, som visas nedan.
 
@@ -86,20 +86,24 @@ Så här skickar du ett avtal med Adobe Sign för Veva:
 
    ![](images/select-adobe-sign.png)
 
+1. Om UMG-funktionen (Användare i flera grupper) är aktiverad på Adobe Acrobat Sign-kontot och avsändaren tillhör flera grupper visas en dialogruta så som visas nedan. Markera gruppen i dialogrutan och välj sedan **[!UICONTROL OK]**.
+
+   ![](images/umg-dialog.png)
+
 1. I iFrame-fönstret som öppnas i Vault anger du mottagarens e-postadress och väljer **[!UICONTROL Nästa]**.
 
    ![](images/iframe.png)
 
-   **Obs!** Om det inte finns något Adobe Sign-användarkonto för avsändarens e-post visas ett meddelande i iFrame-fönstret, enligt nedan. Användaren får också ett e-postmeddelande med instruktioner om hur kontot aktiveras.
+   **Obs!** Om det inte finns något Adobe Acrobat Sign-användarkonto för avsändarens e-post visas ett meddelande i iFrame-fönstret, enligt nedan. Användaren får också ett e-postmeddelande med instruktioner om hur kontot aktiveras.
 
    ![](images/iFrame-registration-message.png)
 
    ![](images/iFrame-confirm-email.png)
 
-   Om *Etablera Sign-användare automatiskt* är inaktiverad, Adobe Sign-användargenerering misslyckas och i iFrame-fönstret visas ett meddelande där användaren uppmanas att kontakta sin Adobe Sign-kontoadministratör. Kontoadministratören för Adobe Sign kan vidta en av följande åtgärder:
+   Om *Etablera Sign-användare automatiskt* är inaktiverad, skapandet av Adobe Acrobat Sign-användare misslyckas och iFrame-fönstret visas ett meddelande där användaren uppmanas att kontakta sin Adobe Acrobat Sign-kontoadministratör. Kontoadministratören för Adobe Acrobat Sign kan vidta en av följande åtgärder:
 
    * Aktivera *Etablera Sign-användare automatiskt* för kontot.
-   * Skapa användaren i Adobe Sign innan du använder VEVA Vault Adobe Sign Integration.
+   * Skapa användaren i Adobe Acrobat Sign innan du använder VEVA Vault Adobe Acrobat Sign-integreringen.
 
    ![](images/iFrame-contact-administrator.png)
 
@@ -111,7 +115,7 @@ Så här skickar du ett avtal med Adobe Sign för Veva:
 
    ![](images/in-adobe-signing.png)
 
-1. När alla signaturer har samlats in och slutförts i Adobe Sign ändras dokumentstatusen i Vault till [!UICONTROL Approved].
+1. När alla signaturer har samlats in och slutförts i Adobe Acrobat Sign ändras dokumentstatusen i Vault till [!UICONTROL Approved].
 
 1. Välj **[!UICONTROL Dokumentfiler]** och expandera **[!UICONTROL Återgivningar]** i Vault. En ny återgivning med namnet Adobe Sign-återgivning skapas automatiskt när dokumentet har statusen Godkänd.
 
@@ -121,7 +125,7 @@ Så här skickar du ett avtal med Adobe Sign för Veva:
 
    ![](images/verify-signature.png)
 
-## Avbryta ett avtal med Adobe Sign för [!DNL Veeva Vault] {#cancel-sign-vault-agreement}
+## Avbryta ett avtal med Adobe Acrobat Sign för [!DNL Veeva Vault] {#cancel-sign-vault-agreement}
 
 1. Gå till [[!DNL Veeva Vault] inloggningssida](https://login.veevavault.com/) och ange ditt användarnamn och lösenord. Den öppnar startsidan för ditt valv, som visas nedan.
 
