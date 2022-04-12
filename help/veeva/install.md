@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c6c0257204ab45776450f77a5a95291a99371063
+source-git-commit: 5481293e84bd72e09df2c2f4b5ce27c5fdea28d0
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -27,7 +27,7 @@ I det här dokumentet beskrivs hur du skapar en integrering av Adobe Acrobat Sig
 
 De viktigaste stegen för att slutföra integreringen är:
 
-* Aktivera administratörskontot i Adobe Acrobat Sign (endast nya kunder).
+* Aktivera ditt administratörskonto i Adobe Acrobat Sign (endast nya kunder).
 * Skapa objekt för att spåra historiken för en avtalslivscykel i Vault.
 * Skapa en ny säkerhetsprofil.
 * Konfigurera en grupp i Adobe Acrobat Sign för att hålla [!DNL Veeva Vault] integrationsanvändare.
@@ -78,13 +78,13 @@ Signaturobjekt skapas för att lagra avtalsrelaterad information. Ett signaturob
 **Fält för signaturobjekt**
 
 | Fält | Etikett | Typ | Beskrivning |
-| --- | --- | ---| --- | 
-| external_id__c | Avtals-ID | Sträng (100) | Innehåller Adobe Acrobat Sign unika avtals-ID |
+|:---|:---|:---|:------- | 
+| external_id__c | Avtals-ID | Sträng (100) | Innehåller Adobe Acrobat Signs unika avtals-ID |
 | file_hash__c | Filhash | Sträng (50) | Innehåller md5-kontrollsumman för filen som har skickats till Adobe Acrobat Sign |
 | name__v | Namn | Sträng (128) | Innehåller avtalsnamnet |
 | sender__c | Avsändare | Objekt (användare) | Innehåller referensen till den Vault-användare som har skapat avtalet |
 | signature_status__c | Signaturstatus | Sträng (75) | Innehåller avtalets status i Adobe Acrobat Sign |
-| signature_type__c | Signaturtyp | Sträng (20) | Innehåller avtalets signaturtyp i Adobe Acrobat Sign (SKRIFTLIG eller ESIGN) |
+| signature_type__c | Signaturtyp | Sträng (20) | Innehåller avtalets signaturtyp i Adobe Acrobat Sign (SKRIVET eller ESIGN) |
 | start_date__c | Startdatum | DatumTid | Datum när avtalet har skickats för signering |
 | cancellation_date__c | Uppsägningsdatum | DatumTid | Innehåller datumet då avtalet har annullerats. |
 | complete_date__c | Slutdatum | DatumTid | Innehåller datumet då avtalet har slutförts. |
@@ -101,8 +101,8 @@ Signeringsobjekt skapas för att lagra information relaterad till deltagarna i e
 **Fält för signeringsobjekt**
 
 | Fält | Etikett | Typ | Beskrivning |
-| --- | --- | ---| --- | 
-| email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Sign unika avtals-ID |
+|:---|:---|:---|:------- | 
+| email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Signs unika avtals-ID |
 | external_id__c | Deltagar-ID | Sträng (80) | Innehåller Adobe Acrobat Sign unika deltagares identifierare |
 | name__v | Namn | Sträng (128) | Innehåller Adobe Acrobat Sign-deltagarens namn |
 | order__c | Ordning | Nummer | Innehåller Adobe Acrobat Sign-avtalsdeltagarens ordernummer |
@@ -120,14 +120,14 @@ Signaturhändelseobjektet skapas för att lagra ett avtals händelserelaterad in
 Fält för signaturhändelseobjekt
 
 | Fält | Etikett | Typ | Beskrivning |
-| --- | --- | ---| --- | 
+|:---|:---|:---|:-------- | 
 | acting_user_email__c | E-post för agerande användare | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | acting_user_name__c | Tillförordnat användarnamn | Sträng | Innehåller namnet på den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | description__c | Beskrivning | Sträng | Innehåller beskrivningen av Adobe Acrobat Sign-händelsen |
 | event_date__c | Händelsedatum | DatumTid | Innehåller datum och klockslag för Adobe Acrobat Sign-händelsen |
 | event_type__c | Händelsetyp | Sträng | Innehåller Adobe Acrobat Sign-händelsens typ |
 | name__v | Namn | Sträng | Namn på automatiskt genererad händelse |
-| participant_comment__c | Deltagarkommentar | Sträng | Innehåller eventuella kommentarer från Adobe Acrobat Sign-deltagare |
+| participant_comment__c | Deltagarkommentar | Sträng | Innehåller eventuella kommentarer från Adobe Acrobat Sign-deltagaren |
 | participant_email__c | E-post till deltagare | Sträng | Innehåller e-postadressen till Adobe Acrobat Sign-deltagaren |
 | participant_role__c | Deltagarroll | Sträng | Innehar Adobe Acrobat Sign-deltagarens roll |
 | signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
@@ -153,8 +153,8 @@ Objektfält för Adobe Sign-integreringsuppgiftslogg
 |:--|:--|:--|:---------| 
 | start_date__c | Startdatum | DatumTid | Aktivitetens startdatum |
 | end_date__c | Slutdatum | DatumTid | Aktivitetens slutdatum |
-| task_status__c | Uppgiftsstatus | Plocklista | Innehåller aktivitetsstatus: <br><br> Slutfört (task_completed__c) <br><br> Slutfördes med fel (task_completed_with_errors__c) <br><br> Misslyckades (task_failed__c) |
-| task_type__c | Aktivitetstyp | Plocklista | Innehåller uppgiftstyp: <br><br> Synkronisering av avtalshändelser (agreements_events_sync__c) <br><br> Bearbetning av avtalshändelser (agreements_events_processing__c) |
+| task_status__c | Uppgiftsstatus | Plocklista | Innehåller aktivitetsstatus: <br><br> Slutförd (task_completed__c) Slutförd med fel (task_completed_with_errors__c) Misslyckades (task_failed__c) |
+| task_type__c | Aktivitetstyp | Plocklista | Innehåller uppgiftstyp: <br><br> Synkronisering av avtalshändelser (agreements_events_sync__c) Bearbetning av avtalshändelser (agreements_events_processing__c) |
 | meddelanden__c | Meddelande | Lång (32000) | Innehåller aktivitetsmeddelande |
 
 ![Bild av information om aktivitetsloggobjekt](images/task-log.png)
@@ -418,7 +418,7 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
       * **Adobe undertecknat (godkänt)**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Acrobat Sign och att dess avtal har slutförts (läget SIGNERAT eller GODKÄNT). Det är ett obligatoriskt steg och det kan vara ett befintligt livscykelsteg, som Godkänt.
 Detta tillstånd kräver inte användaråtgärder. Det måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll och redigera fält.
 
-   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och vaultdokumenttillstånd, där tillståndet Före Adobe-signering är Utkast.
+   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och Vaults dokumenttillstånd, där tillståndet &quot;Före Adobe-signatur&quot; är Utkast.
 
    ![Bild](images/sign-vault-mappings.png)
 
@@ -442,7 +442,7 @@ Du måste ange lämpliga behörigheter för varje användarroll i livscykeltills
 
 ## Anslut [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara {#connect-middleware}
 
-När du har slutfört konfigurationen för [!DNL Veeva Vault] och Adobe Acrobat Sign administratörskonto måste administratören skapa en anslutning mellan de två kontona med hjälp av mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign-identiteten och används sedan för att lagra[!DNL Veeva Vault] identitet.
+När du har slutfört konfigurationen för [!DNL Veeva Vault] och administratörskontot för Adobe Acrobat Sign måste administratören skapa en anslutning mellan de två kontona med mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign Identity och används sedan för att lagra[!DNL Veeva Vault] identitet.
 För systemets säkerhet och stabilitet måste administratören använda en särskild [!DNL Veeva Vault] system/tjänst/verktyg, till exempel `adobe.for.veeva@xyz.com`i stället för ett personligt användarkonto, t.ex. `bob.smith@xyz.com`.
 
 En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara:
