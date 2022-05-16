@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
+source-git-commit: 581b336b4a3610cfe3fd0d92f2a4eebe55b89b27
 workflow-type: tm+mt
-source-wordcount: '4873'
+source-wordcount: '4870'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Se [Skapa ett Adobe Sign-avtal](#createagreement) för mer information om testni
 
 1. Om du redan är Adobe Sign-kundkonto följer du stegen för att  [Konfigurera OAuth efter installation eller uppgradering](#oauth).
 
-   Om du inte har något Adobe Sign-konto kan du [registrera dig för en Enterprise-testversion](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) för att testa systemet. Aktivera ditt Adobe Sign-konto genom att följa registreringsstegen online.
+   Om du inte har något Adobe Sign-konto kan du [registrera dig för en Enterprise-testversion](https://esign.adobe.com/adobe-sign-netsuite-trial-registration.html) för att testa systemet. Aktivera ditt Adobe Sign-konto genom att följa registreringsstegen online.
 
 ## Konfigurera OAuth efter installation eller uppgradering {#oauth}
 
@@ -111,13 +111,13 @@ Den [!DNL NetSuite] administratör som konfigurerar OAuth måste också ha admin
    >När du konfigurerar OAuth i ditt sandlådekonto kan du stöta på felet &quot;Kunde inte fastställa kundens kompositions-ID&quot; när auktoriseringen har slutförts.
    >
    >
-   >Om du vill fortsätta måste du ändra kontodomändelen i URL:en (systemet.[!DNL NetSuite].com) i webbläsaren för att peka på [!DNL NetSuite] Sandlåda enligt följande:
+   >Om du vill fortsätta måste du ändra kontodomändelen av URL:en (system.netsuite.com) i webbläsaren så att den pekar tillbaka på [!DNL NetSuite] Sandlåda enligt följande:
    >
    >
    >Ändra:
    >
    >
-   >systemet.[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >system.netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
    >
    >
    >Till:
@@ -581,7 +581,7 @@ Avinstallera INTE paketet om du måste behålla dina osignerade avtal.
 
 ## Felsökning
 
-### Fastställ uppdateringsförloppet
+### Fastställ uppdateringsförloppet  {#determineprogress}
 
 Om uppdateringen verkar ta längre tid än kan du kontrollera underfliken Körningslogg för installationsskriptet för Adobe Sign Bundle för att se hur det går med uppdateringen på följande sätt:
 
