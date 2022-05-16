@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c54f848d7832e831dc10c8069ac572226f0b31e8
 workflow-type: tm+mt
-source-wordcount: '4871'
+source-wordcount: '4873'
 ht-degree: 1%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 Adobe Sign för [!DNL NetSuite] ger en komplett e-signaturintegrering med [!DNL NetSuite]. Du kan använda Adobe Sign för [!DNL NetSuite] integration för att skicka avtal som kontrakt, offerter och andra dokument som kräver elektroniska signaturer till mottagare direkt från [!DNL NetSuite]. Du kan skapa och skicka Adobe Sign-avtal från kunder, lead, offert och andra [!DNL NetSuite] register. Adobe Sign-uppdateringar [!DNL NetSuite] med status för avtal och lagrar avtalen med de associerade [!DNL NetSuite] poster när de har körts helt. Du kan visa historiken för alla avtal som skickats från [!DNL NetSuite] direkt i produkten.
 
-Se [Adobe Sign för [!DNL NetSuite] versionsinformation](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) för mer information.
+Se [Versionsinformation för Adobe Sign för NetSuite](https://experienceleague.adobe.com/docs/sign-integrations/using/netsuite/release-notes.html?lang=en) för mer information.
 
 ## Installera paketet och konfigurera OAuth {#install}
 
@@ -66,7 +66,7 @@ Se [Skapa ett Adobe Sign-avtal](#createagreement) för mer information om testni
 
 1. Om du redan är Adobe Sign-kundkonto följer du stegen för att  [Konfigurera OAuth efter installation eller uppgradering](#oauth).
 
-   Om du inte har något Adobe Sign-konto kan du [registrera dig för en Enterprise-testversion](https://esign.adobe.com/adobe-sign-[!DNL NetSuite]-trial-registration.html) för att testa systemet. Aktivera ditt Adobe Sign-konto genom att följa registreringsstegen online.
+   Om du inte har något Adobe Sign-konto kan du [registrera dig för en Enterprise-testversion](https://esign.adobe.com/adobe-sign-DNL NetSuite-trial-registration.html) för att testa systemet. Aktivera ditt Adobe Sign-konto genom att följa registreringsstegen online.
 
 ## Konfigurera OAuth efter installation eller uppgradering {#oauth}
 
@@ -123,7 +123,7 @@ Den [!DNL NetSuite] administratör som konfigurerar OAuth måste också ha admin
    >Till:
    >
    >
-   >systemet.**sandlådan.**[!DNL NetSuite].com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
+   >systemet.**sandlådan.** netsuite.com/app/site/hosting/scriptlet.nl?script=745&amp;deploy=1&amp;web_access_point=https://echosign.com
 
 ## Uppdatera paketet (befintliga användare)
 
@@ -355,7 +355,7 @@ Mest [!DNL NetSuite] -roller måste ha behörighet att använda Adobe Sign utan 
 
    >[!NOTE]
    >
-   >Se *[Konfigurera en behörighetslista för en anpassad posttyp](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* för mer information
+   >Se *[Konfigurera en behörighetslista för en anpassad posttyp](https://system.netsuite.com/app/help/helpcenter.nl?fid=section_N2879931.html)* för mer information
 
    1. Välj rollen från *Roll* lista.
    1. Uppsättning *Nivå* till **[!UICONTROL Fullständig]**.
@@ -573,7 +573,7 @@ När avtalet har signerats:
 
 ## Avinstallera paketet
 
-Följ stegen i [!DNL NetSuite] Hjälp. Se *[Avinstallera ett paket](https://docs.oracle.com/cloud/latest/[!DNL NetSuite]cs_gs/NSBDL/NSBDL.pdf)* i [!DNL NetSuite] Hjälpcenter för mer information.
+Följ stegen i [!DNL NetSuite] Hjälp. Se *[Avinstallera ett paket](https://docs.oracle.com/en/cloud/saas/netsuite/ns-online-help/section_N3400972.html)* i [!DNL NetSuite] Hjälpcenter för mer information.
 
 När du avinstallerar paketet tas de osignerade avtalen bort. De signerade avtalen och motsvarande gransknings-PDF-filer påverkas inte.
 
