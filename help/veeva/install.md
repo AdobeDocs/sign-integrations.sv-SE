@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 6b06bb8562ea7464fdbc23a25a4be3572eccdd1e
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
 source-wordcount: '3909'
 ht-degree: 3%
@@ -77,7 +77,7 @@ Signaturobjekt skapas för att lagra avtalsrelaterad information. Ett signaturob
 
 **Fält för signaturobjekt**
 
-| Fält | Etikett | Typ | Beskrivning         |
+| Fält | Etikett | Typ | Beskrivning |
 |:---|:---|:---|:------- | 
 | external_id__c | Avtals-ID | Sträng (100) | Innehåller Adobe Acrobat Signs unika avtals-ID |
 | file_hash__c | Filhash | Sträng (50) | Innehåller md5-kontrollsumman för filen som har skickats till Adobe Acrobat Sign |
@@ -102,7 +102,7 @@ Signeringsobjekt skapas för att lagra information relaterad till deltagarna i e
 
 | Fält | Etikett | Typ | Beskrivning |
 |:---|:---|:---|:------- | 
-| email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Sign unika avtals-ID |
+| email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Signs unika avtals-ID |
 | external_id__c | Deltagar-ID | Sträng (80) | Innehåller Adobe Acrobat Sign unika deltagares identifierare |
 | name__v | Namn | Sträng (128) | Innehåller Adobe Acrobat Sign-deltagarens namn |
 | order__c | Ordning | Nummer | Innehåller Adobe Acrobat Sign-avtalsdeltagarens ordernummer |
@@ -124,12 +124,12 @@ Fält för signaturhändelseobjekt
 | acting_user_email__c | E-post för agerande användare | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | acting_user_name__c | Tillförordnat användarnamn | Sträng | Innehåller namnet på den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | description__c | Beskrivning | Sträng | Innehåller beskrivningen av Adobe Acrobat Sign-händelsen |
-| event_date__c | Händelsedatum | DatumTid | Innehåller datum och klockslag för Adobe Acrobat Sign-händelsen |
+| event_date__c | Händelsedatum | DatumTid | Innehåller datum och tid för Adobe Acrobat Sign-händelsen |
 | event_type__c | Händelsetyp | Sträng | Innehåller Adobe Acrobat Sign-händelsens typ |
 | name__v | Namn | Sträng | Namn på automatiskt genererad händelse |
 | participant_comment__c | Deltagarkommentar | Sträng | Innehåller eventuella kommentarer från Adobe Acrobat Sign-deltagaren |
 | participant_email__c | E-post till deltagare | Sträng | Innehåller e-postadressen till Adobe Acrobat Sign-deltagaren |
-| participant_role__c | Deltagarroll | Sträng | Innehåller Adobe Acrobat Sign-deltagarens roll |
+| participant_role__c | Deltagarroll | Sträng | Innehar Adobe Acrobat Sign-deltagarens roll |
 | signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
 | external_id__c | Externt ID | Text (200) | Innehåller avtalshändelse-ID som genererats av Adobe Sign. |
 
@@ -153,7 +153,7 @@ Objektfält för Adobe Sign-integreringsuppgiftslogg
 |:--|:--|:--|:---------| 
 | start_date__c | Startdatum | DatumTid | Aktivitetens startdatum |
 | end_date__c | Slutdatum | DatumTid | Aktivitetens slutdatum |
-| task_status__c | Uppgiftsstatus | Plocklista | Innehåller aktivitetsstatus: <br><br> Slutförd (task_completed__c) Slutförd med fel (task_completed_with_errors__c) Misslyckades (task_failed__c) |
+| task_status__c | Uppgiftsstatus | Plocklista | Innehåller aktivitetsstatus: <br /> Slutförd (task_completed__c) Slutförd med fel (task_completed_with_errors__c) Misslyckades (task_failed__c) |
 | task_type__c | Aktivitetstyp | Plocklista | Innehåller uppgiftstyp: <br><br> Synkronisering av avtalshändelser (agreements_events_sync__c) Bearbetning av avtalshändelser (agreements_events_processing__c) |
 | meddelanden__c | Meddelande | Lång (32000) | Innehåller aktivitetsmeddelande |
 
@@ -235,7 +235,7 @@ När du distribuerar Adobe Acrobat Sign-paketet skapas en dokumenttypsgrupppost 
 
 ![Bild av dokumenttypsgrupper](images/document-type-groups.png)
 
-Du måste lägga till den här dokumenttypgruppen för alla dokumentklassificeringar som är berättigade till Adobe Acrobat Sign-processen. Eftersom dokumenttypens gruppegenskap inte ärvs från typ till undertyp eller från undertyp till klassificeringsnivå, måste den anges för varje dokuments klassificering som är berättigad till Adobe Acrobat Sign.
+Du måste lägga till den här dokumenttypgruppen för alla dokumentklassificeringar som är berättigade till Adobe Acrobat Sign-processer. Eftersom dokumenttypens gruppegenskap inte ärvs från typ till undertyp eller från undertyp till klassificeringsnivå, måste den anges för varje dokuments klassificering som är berättigad till Adobe Acrobat Sign.
 
 ![Bild av information om dokumentredigering](images/document-edit-details.png)
 
@@ -299,7 +299,7 @@ Den nya återgivningstypen anropas *Ursprunglig återgivning (original_rendition
 
 ### Steg 9. Uppdatera webbåtgärder {#web-actions}
 
-Integrering med Adobe Acrobat Sign och Vault kräver att du skapar och konfigurerar följande två webbåtgärder:
+För integrering med Adobe Acrobat Sign och Vault måste du skapa och konfigurera följande två webbåtgärder:
 
 * **Skapa Adobe Sign**: Adobe Acrobat Sign-avtal skapas eller visas.
 
@@ -418,7 +418,7 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
       * **Adobe undertecknat (godkänt)**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Acrobat Sign och att dess avtal har slutförts (läget SIGNERAT eller GODKÄNT). Det är ett obligatoriskt steg och det kan vara ett befintligt livscykelsteg, som Godkänt.
 Detta tillstånd kräver inte användaråtgärder. Det måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll och redigera fält.
 
-   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och vaultdokumenttillstånd, där tillståndet Före Adobe-signering är Utkast.
+   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och Vaults dokumenttillstånd, där tillståndet &quot;Före Adobe-signatur&quot; är Utkast.
 
    ![Bild](images/sign-vault-mappings.png)
 
@@ -442,7 +442,7 @@ Du måste ange lämpliga behörigheter för varje användarroll i livscykeltills
 
 ## Anslut [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara {#connect-middleware}
 
-När du har slutfört konfigurationen för [!DNL Veeva Vault] och Adobe Acrobat Sign administratörskonto måste administratören skapa en anslutning mellan de två kontona med hjälp av mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign-identiteten och används sedan för att lagra[!DNL Veeva Vault] identitet.
+När du har slutfört konfigurationen för [!DNL Veeva Vault] och administratörskontot för Adobe Acrobat Sign måste administratören skapa en anslutning mellan de två kontona med mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign Identity och används sedan för att lagra[!DNL Veeva Vault] identitet.
 För systemets säkerhet och stabilitet måste administratören använda en särskild [!DNL Veeva Vault] system/tjänst/verktyg, till exempel `adobe.for.veeva@xyz.com`i stället för ett personligt användarkonto, t.ex. `bob.smith@xyz.com`.
 
 En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara:
@@ -490,7 +490,7 @@ En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att an
 
 1. Markera kryssrutan om du vill tillåta automatisk etablering av användare i Adobe Acrobat Sign **[!UICONTROL Etablera Sign-användare automatiskt]**.
 
-   **Obs!** Automatisk etablering av nya Adobe Acrobat Sign-användare fungerar bara om den har aktiverats på Adobe Acrobat Sign-kontonivå i Adobe Acrobat Sign förutom att aktivera **[!UICONTROL Etablera Sign-användare automatiskt]** för[!DNL Veeva Vault] Adobe Acrobat Sign-integreringen visas nedan av kontoadministratören för Adobe Acrobat Sign.
+   **Obs!** Automatisk etablering av nya Adobe Acrobat Sign-användare fungerar bara om det har aktiverats på Adobe Acrobat Sign-kontonivå i Adobe Acrobat Sign förutom att aktivera **[!UICONTROL Etablera Sign-användare automatiskt]** för[!DNL Veeva Vault] Adobe Acrobat Sign-integreringen visas nedan av kontoadministratören för Adobe Acrobat Sign.
 
    ![Bild](images/allow-auto-provisioning.png)
 

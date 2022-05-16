@@ -8,9 +8,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 378cac01-87c9-4288-8839-482121d49402
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
 workflow-type: tm+mt
-source-wordcount: '4870'
+source-wordcount: '4871'
 ht-degree: 1%
 
 ---
@@ -355,7 +355,7 @@ Mest [!DNL NetSuite] -roller måste ha behörighet att använda Adobe Sign utan 
 
    >[!NOTE]
    >
-   >Se *[Konfigurera en behörighetslista för en anpassad posttyp](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* i [!DNL NetSuite] Hjälpcenter för mer information
+   >Se *[Konfigurera en behörighetslista för en anpassad posttyp](https://system.[!DNL NetSuite].com/app/help/helpcenter.nl?fid=section_N2879931.html)* för mer information
 
    1. Välj rollen från *Roll* lista.
    1. Uppsättning *Nivå* till **[!UICONTROL Fullständig]**.
