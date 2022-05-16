@@ -11,10 +11,10 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 8b6fa8b4-e240-4ebe-ae2a-8807d75a6c69
-source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
+source-git-commit: 2cc0ea55ee7dca3682896c61c85eec29a555339c
 workflow-type: tm+mt
-source-wordcount: '1348'
-ht-degree: 30%
+source-wordcount: '1347'
+ht-degree: 29%
 
 ---
 
@@ -72,13 +72,13 @@ Så här konfigurerar du [!UICONTROL Steg för granskning av dokument]:
 
 Från menyn för relaterade åtgärder i en [!UICONTROL Steg för granskning av dokument]väljer du **[!UICONTROL Affärsprocess]** > **[!UICONTROL Underhåll omdirigering]**. Välj sedan något av följande:
 
-* **[!UICONTROL Skicka tillbaka]**: För att göra det möjligt för säkerhetsgruppmedlemmar att skicka tillbaka ett steg till ett tidigare steg i affärsprocessen. Affärsprocessen startar om från detta steg.
+* **[!UICONTROL Send Back]**: To enable security group members to send a step back to a prior step in the business process. Affärsprocessen startar om från detta steg.
 * **[!UICONTROL Flytta till nästa steg]**: För att göra det möjligt för säkerhetsgruppmedlemmar att vidarebefordra ett steg till nästa steg i affärsprocessen.
-* **[!UICONTROL Säkerhetsgrupper]**: Om du vill omdirigera steg i affärsprocessflödet. Säkerhetsgrupper som visas vid denna uppmaning markeras i säkerhetspolicyn för affärsprocessen i omdirigeringsavsnittet.
+* **[!UICONTROL Security Groups]**: To redirect steps in the business process flow. Säkerhetsgrupper som visas vid denna uppmaning markeras i säkerhetspolicyn för affärsprocessen i omdirigeringsavsnittet.
 
 ## Steganteckningar för affärsprocess {#business-process-step-notes}
 
-[!UICONTROL Affärsprocessens ramverk] är kraftfull; Du måste dock se till att
+Den [!UICONTROL Business Process Framework] är kraftfull; Du måste dock se till att
 
 * Varje affärsprocess måste ha ett slutförandesteg, vilket helst är i slutet av affärsprocessen.
 
@@ -90,7 +90,7 @@ Från menyn för relaterade åtgärder i en [!UICONTROL Steg för granskning av 
 
 ### Exempel: erbjudande {#example-offer}
 
-Erbjudandet BP är en underprocess till [!UICONTROL Dynamisk affärsprocess för jobbprogram] som måste konfigureras för att utföra erbjudandebasprocessen. Den utlöses när jobbprogramtillståndet flyttas till[!UICONTROL Erbjudande]&quot; eller &quot;[!UICONTROL Erbjud]&quot;.
+The Offer BP is a sub process of the [!UICONTROL Job Application Dynamic BP] that must be configured to execute the Offer BP. Den utlöses när jobbprogramtillståndet flyttas till[!UICONTROL Erbjudande]&quot; eller &quot;[!UICONTROL Erbjud]&quot;.
 
 I exemplet nedan visas en [!UICONTROL Steg för granskning av dokument] använder ett dynamiskt dokumentsteg för både Nordamerika och Japan.
 
@@ -99,7 +99,7 @@ I exemplet nedan visas en [!UICONTROL Steg för granskning av dokument] använde
 Den här affärsprocessen gör följande:
 
 * Europaparlamentet uppmanar initiativtagaren till BP att föreslå kompensation för kandidaten (steg b).
-* Använder ett stegvillkor för att testa om det aktuella landet inte är Japan.
+* Uses a step condition to test whether the current country is NOT Japan.
 
    Om värdet är true utförs steg &quot;ba&quot;, som använder ett dokument på engelska.
 
@@ -112,9 +112,9 @@ Det dynamiska dokumentet som skapas i steget ”ba” kallas [!UICONTROL Offer L
 
 ![[!DNL Workday] visa dokumentsida](images/offer-letter-575.png)
 
-Det dynamiska erbjudandebrevet nedan skapas i [!DNL Workday] RTF-redigerare. De objekt som markeras i *grå* är [!DNL Workday] tillhandahöll objekt som refererar till sammanhangsberoende data.
+The Dynamic offer letter below is created in the [!DNL Workday] rich text editor. De objekt som markeras i *grå* är [!DNL Workday] tillhandahöll objekt som refererar till sammanhangsberoende data.
 
-Objekt inom {{hakparenteser}} är [Adobe-texttaggar](https://adobe.com/go/adobesign_text_tag_guide_se).
+Objekt i {{brackets}} är [Adobe Text-taggar](https://adobe.com/go/adobesign_text_tag_guide_se).
 
 ![Exempel på dynamiskt formulär](images/script.png)
 
@@ -126,7 +126,7 @@ Det beteende som visas nedan dirigerar det dynamiskt genererade dokumentet förs
 
 ### Exempel: Distribuera dokument {#example-distribute-documents}
 
-Introducerades i [!DNL Workday] 30, kan uppgiften Massdistribuera dokument eller Uppgifter användas för att skicka ett dokument till en stor grupp (&lt;20 kB) enskilda signerare. Detta är begränsat till en signatur per dokument. En distribution skapas genom att man går till[!UICONTROL Skapa och distribuera dokument eller uppgifter]’ från sökfältet.
+Introduced in [!DNL Workday] 30, the Mass Distribute Documents or Tasks task can be used to send a single document to a large group (&lt;20K) of individual signers. Detta är begränsat till en signatur per dokument. Creation of a distribution is performed by accessing the ‘[!UICONTROL Create Distribute Documents or Tasks]’ action from the search bar.
 
 Exempel: Skicka ett formulär för personalens eget kapital till alla chefer med [!UICONTROL Global Modern Services]. Du kan filtrera den ytterligare till enskilda hanterare om du vill.
 
@@ -162,12 +162,12 @@ Om du vill inaktivera det här beteendet kan du kontakta [!UICONTROL Adobe Sign 
 
 Inom [!DNL Workday], du kan komma åt de signerade dokumenten i den fullständiga processposten. Du kan hitta:
 
-* Arbetardokument i arbetsprofilen och
+* Worker documents on the Worker Profile, and
 * Kandidatdokument (erbjudandebrev) på kandidatprofilen.
 
 Bilden nedan visar ett signerat erbjudandebrev för kandidaten Chris Foxx.
 
-![Exempel [!DNL Workday] erbjudandebrev](images/offer.png)
+![Example [!DNL Workday] offer letter](images/offer.png)
 
 ## Support {#support}
 
@@ -186,7 +186,7 @@ Den [!DNL Workday] användarforumet har flera bra artiklar om hur man felsöker 
 
 Adobe Sign är integreringspartnern och ska kontaktas om integreringen inte kan hämta signaturer eller om meddelanden med väntande signeringar misslyckas.
 
-Adobe Sign-kunder bör kontakta sin Customer Success Manager för support. Alternativt [!UICONTROL Adobe teknisk support] kan nås via telefon: 1-866-318-4100, vänta på produktlistan och ange sedan: 4 och sedan 2 (enligt anvisning).
+Adobe Sign-kunder bör kontakta sina [!UICONTROL Customer Success Manager] för support. Alternativt [!UICONTROL Adobe teknisk support] kan nås via telefon: 1-866-318-4100, vänta på produktlistan och ange sedan: 4 och sedan 2 (enligt anvisning).
 
 * [Lägg till Adobe-texttaggar i dokument](https://www.adobe.com/go/adobesign_text_tag_guide)
 
