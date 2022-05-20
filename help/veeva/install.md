@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 0577f30c35a348174bed27c6eb309fce43f03eca
+source-git-commit: c60fd19fa52fb203fd19da69d58792ef6fb88eec
 workflow-type: tm+mt
-source-wordcount: '3909'
+source-wordcount: '3931'
 ht-degree: 3%
 
 ---
@@ -103,7 +103,7 @@ Signeringsobjekt skapas för att lagra information relaterad till deltagarna i e
 | Fält | Etikett | Typ | Beskrivning |
 |:---|:---|:---|:------- | 
 | email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Signs unika avtals-ID |
-| external_id__c | Deltagar-ID | Sträng (80) | Innehåller Adobe Acrobat Sign unika deltagares identifierare |
+| external_id__c | Deltagar-ID | Sträng (80) | Innehåller identifierare för unik Adobe Acrobat Sign-deltagare |
 | name__v | Namn | Sträng (128) | Innehåller Adobe Acrobat Sign-deltagarens namn |
 | order__c | Ordning | Nummer | Innehåller Adobe Acrobat Sign-avtalsdeltagarens ordernummer |
 | role__c | Roll | Sträng (30) | Innehåller Adobe Acrobat Sign-avtalsdeltagarens roll |
@@ -121,7 +121,7 @@ Fält för signaturhändelseobjekt
 
 | Fält | Etikett | Typ | Beskrivning |
 |:---|:---|:---|:-------- | 
-| acting_user_email__c | E-post för agerande användare | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
+| acting_user_email__c | E-post för agerande användare | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade händelsen |
 | acting_user_name__c | Tillförordnat användarnamn | Sträng | Innehåller namnet på den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | description__c | Beskrivning | Sträng | Innehåller beskrivningen av Adobe Acrobat Sign-händelsen |
 | event_date__c | Händelsedatum | DatumTid | Innehåller datum och tid för Adobe Acrobat Sign-händelsen |
@@ -191,7 +191,7 @@ Signaturobjektet som ingår i distributionspaketet levereras med [Sidlayout för
 
    ![Bild](images/view-participants-audit-history.png)
 
-* På sidan som öppnas visas deltagare och historik för Adobe Acrobat Sign-dokumentet, enligt nedan.
+* På sidan som öppnas visas Deltagare och historik för Adobe Acrobat Sign-dokumentet enligt nedan.
 
    ![Bild](images/participants-and-history.png)
 
@@ -418,7 +418,7 @@ Följ stegen nedan för att uppdatera dokumentets livscykel:
       * **Adobe undertecknat (godkänt)**: Det här är ett platshållarnamn för läget som anger att dokumentet har överförts till Adobe Acrobat Sign och att dess avtal har slutförts (läget SIGNERAT eller GODKÄNT). Det är ett obligatoriskt steg och det kan vara ett befintligt livscykelsteg, som Godkänt.
 Detta tillstånd kräver inte användaråtgärder. Det måste ha en säkerhet som tillåter Adobe Sign administratörsroll att: visa dokument, visa innehåll och redigera fält.
 
-   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och Vaults dokumenttillstånd, där tillståndet &quot;Före Adobe-signatur&quot; är Utkast.
+   I följande diagram visas mappningarna mellan Adobe Acrobat Sign-avtal och vaultdokumenttillstånd, där tillståndet Före Adobe-signering är Utkast.
 
    ![Bild](images/sign-vault-mappings.png)
 
@@ -442,7 +442,7 @@ Du måste ange lämpliga behörigheter för varje användarroll i livscykeltills
 
 ## Anslut [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara {#connect-middleware}
 
-När du har slutfört konfigurationen för [!DNL Veeva Vault] och administratörskontot för Adobe Acrobat Sign måste administratören skapa en anslutning mellan de två kontona med mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign Identity och används sedan för att lagra[!DNL Veeva Vault] identitet.
+När du har slutfört konfigurationen för [!DNL Veeva Vault] och administratörskontot för Adobe Acrobat Sign måste administratören skapa en anslutning mellan de två kontona med mellanvara. Den [!DNL Veeva Vault] och Adobe Acrobat Sign-kontoanslutningen initieras av Adobe Acrobat Sign-identiteten och används sedan för att lagra[!DNL Veeva Vault] identitet.
 För systemets säkerhet och stabilitet måste administratören använda en särskild [!DNL Veeva Vault] system/tjänst/verktyg, till exempel `adobe.for.veeva@xyz.com`i stället för ett personligt användarkonto, t.ex. `bob.smith@xyz.com`.
 
 En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att ansluta [!DNL Veeva Vault] till Adobe Acrobat Sign med mellanvara:
@@ -451,6 +451,10 @@ En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att an
 1. Välj **[!UICONTROL Logga in]** från det övre högra hörnet.
 
    ![Bild av inloggning till mellanvara](images/middleware_login.png)
+
+1. Om du vill godkänna åtkomstnivån för programmet väljer du Acrobat Sign OAuth-omfång som **[!UICONTROL KONTO]** eller **[!UICONTROL GRUPP]**. Välj sedan **[!UICONTROL Auktorisera]**.
+
+   ![Bild](images/middleware_oauth.png)
 
 1. På inloggningssidan för Adobe Acrobat Sign som öppnas anger du e-postadress och lösenord för kontoadministratören och väljer sedan **[!UICONTROL Logga in]**.
 
@@ -490,7 +494,7 @@ En Adobe Acrobat Sign-kontoadministratör måste följa stegen nedan för att an
 
 1. Markera kryssrutan om du vill tillåta automatisk etablering av användare i Adobe Acrobat Sign **[!UICONTROL Etablera Sign-användare automatiskt]**.
 
-   **Obs!** Automatisk etablering av nya Adobe Acrobat Sign-användare fungerar bara om det har aktiverats på Adobe Acrobat Sign-kontonivå i Adobe Acrobat Sign förutom att aktivera **[!UICONTROL Etablera Sign-användare automatiskt]** för[!DNL Veeva Vault] Adobe Acrobat Sign-integreringen visas nedan av kontoadministratören för Adobe Acrobat Sign.
+   **Obs!** Automatisk etablering av nya Adobe Acrobat Sign-användare fungerar bara om den har aktiverats på Adobe Acrobat Sign-kontonivå i Adobe Acrobat Sign förutom att aktivera **[!UICONTROL Etablera Sign-användare automatiskt]** för[!DNL Veeva Vault] Adobe Acrobat Sign-integreringen visas nedan av kontoadministratören för Adobe Acrobat Sign.
 
    ![Bild](images/allow-auto-provisioning.png)
 
