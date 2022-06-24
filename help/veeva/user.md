@@ -9,7 +9,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
-source-git-commit: 076c575d179f576366c1d9a76be0a582154574b1
+source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
 ht-degree: 2%
@@ -18,9 +18,9 @@ ht-degree: 2%
 
 # Adobe Acrobat Sign för [!DNL Veeva Vault]: Användarhandbok {#veeva-vault-user-guide}
 
-[**Kontakta Adobe Acrobat Signs support**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Acrobat Sign Support**](https://adobe.com/go/adobesign-support-center_se)
 
-Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig hur du använder Adobe Acrobat Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
+Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig använda Adobe Acrobat Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
 
 ## Översikt {#overview}
 
@@ -53,6 +53,7 @@ Så här skickar du ett avtal med Adobe Acrobat Sign för Veva:
 1. Ladda upp alla dokument från den lokala enheten.
 
 1. I dialogrutan som visas väljer du **[!UICONTROL Text]** som *[!UICONTROL Kliniska]* och välj sedan en **[!UICONTROL Undertyp]** och **[!UICONTROL Klassificering]**, om så krävs.
+
 
    ![](images/choose-document-type.png)
 
@@ -100,10 +101,10 @@ Så här skickar du ett avtal med Adobe Acrobat Sign för Veva:
 
    ![](images/iFrame-confirm-email.png)
 
-   Om *Etablera Sign-användare automatiskt* är inaktiverad, skapandet av Adobe Acrobat Sign-användare misslyckas och iFrame-fönstret visas ett meddelande där användaren uppmanas att kontakta sin Adobe Acrobat Sign-kontoadministratör. Kontoadministratören för Adobe Acrobat Sign kan vidta en av följande åtgärder:
+   Om *Etablera Sign-användare automatiskt* är inaktiverad, Adobe Acrobat Sign-användargenerering misslyckas och i iFrame-fönstret visas ett meddelande där användaren uppmanas att kontakta sin Adobe Acrobat Sign-kontoadministratör. Kontoadministratören för Adobe Acrobat Sign kan vidta en av följande åtgärder:
 
    * Aktivera *Etablera Sign-användare automatiskt* för kontot.
-   * Skapa användaren i Adobe Acrobat Sign innan du använder VEVA Vault Adobe Acrobat Sign-integreringen.
+   * Skapa användaren i Adobe Acrobat Sign innan du använder VEVA Vault Adobe Acrobat Sign Integration.
 
    ![](images/iFrame-contact-administrator.png)
 
