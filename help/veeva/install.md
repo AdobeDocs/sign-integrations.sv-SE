@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
+source-git-commit: 00db62c894df93abac31bf8196730382d54e8fa0
 workflow-type: tm+mt
-source-wordcount: '4169'
+source-wordcount: '4176'
 ht-degree: 3%
 
 ---
@@ -320,7 +320,7 @@ När en användare väljer ett avtal för elektronisk underskrift med ovanståen
 
 Om du vill visa dokumentinnehållet tillsammans med den digitala signaturen och granskningsspåret ska du inte markera Bifoga granskningsrapport till signerad återgivning med Visa Acrobat Sign-återgivning i administratörsgränssnittet för digital signatur.
 
-Du kan hämta eller visa Adobe granskningsspår som en separat återgivning från den signerade återgivningen.
+Du kan hämta eller visa Adobe granskningsspår som en separat återgivning från den signerade återgivningen med hjälp av funktionen Återgivning av Adobe granskningsspår.
 
 ![Bild](images/audit-trail-rendition-setup-4.png)
 
