@@ -10,7 +10,7 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
+source-git-commit: c09759f2455b476fd1093d845cee4f5c3c3601d7
 workflow-type: tm+mt
 source-wordcount: '4169'
 ht-degree: 3%
@@ -289,13 +289,13 @@ Inaktivera vaultövertäckningar (disable_vault_overlays__v) är ett befintligt 
 
 Den nya återgivningstypen anropas *Adobe Sign-återgivning (adobe_sign_rendition__c)* används av Vault-integrering för att överföra signerade PDF-dokument till Adobe Acrobat Sign. Du måste deklarera Adobe Sign-återgivningen för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
 
-Du måste deklarera den ursprungliga återgivningen för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
-
 ![Bild av återgivningstyper](images/rendition-type.png)
 
 ![Bild](images/edit-details-clinical.png)
 
 Den nya återgivningstypen anropas *Ursprunglig återgivning* (original_rendition__c) används av vaultintegreringen som namnet på den återgivning som ska användas för att lagra den ursprungliga visningsbara återgivningen om det signerade dokumentet importeras som en visningsbar återgivning.
+
+Du måste deklarera den ursprungliga återgivningen för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
 
 ![Bild](images/original-rendition.png)
 
