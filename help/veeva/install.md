@@ -10,9 +10,9 @@ solution: Acrobat Sign
 role: User, Developer
 topic: Integrations
 exl-id: 5d61a428-06e4-413b-868a-da296532c964
-source-git-commit: 163c74a2e03aeaa0627d972b791166d4ea4e66a6
+source-git-commit: 08d55f79fd4fff8f13dc23b9d155e501ca038be1
 workflow-type: tm+mt
-source-wordcount: '3933'
+source-wordcount: '4169'
 ht-degree: 3%
 
 ---
@@ -289,13 +289,40 @@ Inaktivera vaultövertäckningar (disable_vault_overlays__v) är ett befintligt 
 
 Den nya återgivningstypen anropas *Adobe Sign-återgivning (adobe_sign_rendition__c)* används av Vault-integrering för att överföra signerade PDF-dokument till Adobe Acrobat Sign. Du måste deklarera Adobe Sign-återgivningen för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
 
+Du måste deklarera den ursprungliga återgivningen för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
+
 ![Bild av återgivningstyper](images/rendition-type.png)
 
 ![Bild](images/edit-details-clinical.png)
 
-Den nya återgivningstypen anropas *Ursprunglig återgivning (original_rendition__c)* används av Vault-integreringen som namnet på den återgivning som ska användas för att lagra den ursprungliga visningsbara återgivningen om det signerade dokumentet importeras som visningsbar återgivning.
+Den nya återgivningstypen anropas *Ursprunglig återgivning* (original_rendition__c) används av vaultintegreringen som namnet på den återgivning som ska användas för att lagra den ursprungliga visningsbara återgivningen om det signerade dokumentet importeras som en visningsbar återgivning.
 
 ![Bild](images/original-rendition.png)
+
+Valvet kan även ha en ny återgivningstyp, Adobe Audit Trail Rendition (adobe_audit_trail_rendition__c), som används för vaultintegrering för att lagra Adobe-granskningsspårsrapporten.
+
+Följ stegen nedan för att konfigurera återgivning av Adobe granskningsspår:
+
+1. Gå till **Återgivningstyp** > **Skapa ny återgivningstyp**.
+Skapa den nya återgivningstypen som Återgivning av granskningsspår (adobe_audit_trail_rendition__c).
+
+   ![Bild](images/audit-trail-rendition-setup-1.png)
+
+1. Deklarera om du vill visa och hämta Adobe-återgivningen av granskningsspår för dokument *Återgivning av Adobe granskningsspår* för varje dokumenttyp som är berättigad till Adobe Acrobat-signatur.
+
+   ![Bild](images/audit-trail-rendition-setup-2.png)
+
+**Anteckning**: Du kan välja att bifoga granskningsrapporten till den signerade återgivningen genom att aktivera **[!UICONTROL Bifoga revideringsrapport till signerad återgivning]** och visa återgivningen genom att aktivera ****[!UICONTROL Visa Acrobat Sign-återgivning]**** alternativ i inställningarna för administratörsgränssnittet.
+
+![Bild](images/audit-trail-rendition-setup-3.png)
+
+När en användare väljer ett avtal för elektronisk underskrift med ovanstående inställningar visas ett meddelande (som visas nedan) som anger att Adobe Acrobat Sign använder PDF Portfolio för att kombinera digitalt signerade PDF- och granskningsversionsrapporter.
+
+Om du vill visa dokumentinnehållet tillsammans med den digitala signaturen och granskningsspåret ska du inte markera Bifoga granskningsrapport till signerad återgivning med Visa Acrobat Sign-återgivning i administratörsgränssnittet för digital signatur.
+
+Du kan hämta eller visa Adobe granskningsspår som en separat återgivning från den signerade återgivningen.
+
+![Bild](images/audit-trail-rendition-setup-4.png)
 
 ### Steg 9. Uppdatera webbåtgärder {#web-actions}
 
