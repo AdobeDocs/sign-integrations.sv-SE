@@ -1,60 +1,47 @@
 ---
-source-git-commit: 8cb918e2d0d438d39a9f14f719c28b5981ff2656
+source-git-commit: 85743a2442808fa200a39d2e9bc27d4853dd2360
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
-# Medverkar
+# Bidra
 
 Tack för att du väljer att bidra!
 
-Nedan följer några riktlinjer som du kan följa när du bidrar till projektet.
+Nedan följer ett antal riktlinjer som du kan följa när du bidrar till projektet.
 
 ## Uppförandekod
 
-Detta projekt följer Adobe [uppförandekoden](code-of-conduct.md). Genom att delta
-du förväntas hålla kvar den här koden. Rapportera oacceptabla beteenden till
+Detta projekt ansluter sig till Adobe [uppförandekod](code-of-conduct.md). Genom att delta förväntas du upprätthålla den här koden. Rapportera oacceptabla beteenden till
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
-## Dokumentation för Contributor-handboken
+## Dokumentation för Bidragsgivarguiden
 
-Se [Contributor Guide](https://docs.adobe.com/content/help/en/contributor/contributor-guide/introduction.html).
+Se [Bidragsgivarguide](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
 
-## Har du en fråga?
+## Har du frågor?
 
-Börja med att lämna in ett ärende. Befintliga committers i det här projektet arbetar på att nå
-konsensus om projektledning och skicka ut lösningar inom problemtrådar
-(i tillämpliga fall).
+Börja med att lämna in ett ärende. De befintliga publicisterna för projektet arbetar för att nå konsensus kring projektriktning och utfärdande av lösningar inom trådarna (när så är lämpligt).
 
-## Licensavtal för deltagare
+## Licensavtal för bidragsgivare
 
-Alla bidrag från tredje part till detta projekt måste åtföljas av en undertecknad bidragsgivare
-licensavtal. Detta ger Adobe tillstånd att återfördela dina bidrag
-som en del av projektet. [Underteckna vårt CLA-avtal](http://opensource.adobe.com/cla.html). Du
-behöver bara skicka ett Adobe CLA en gång, så om du har skickat in ett tidigare,
-Du är redo att gå!
+Alla bidrag från tredje part till detta projekt måste åtföljas av ett undertecknat licensavtal från bidragsgivaren. Detta ger Adobe tillstånd att omfördela dina bidrag som en del av projektet. [Signera vårt CLA-avtal](http://opensource.adobe.com/cla.html). Du behöver bara skicka in ett Adobe-CLA en gång, så om du har skickat in ett tidigare är du klar!
 
-## Kodrecensioner
+## KODGRANSKNINGAR
 
-Alla inlagor ska skickas i form av en begäran om utlysning och behöver granskas
-efter projektcommitters. Läs [dokumentationen för GitHub:s pull-begäran](https://help.github.com/articles/about-pull-requests/)
-om du vill ha mer information om hur du skickar pull-begäranden.
+Alla bidrag ska skickas i form av pull-förfrågningar och måste granskas av projektledare. Läs [Dokumentation för GitHubs pull-förfrågningar](https://help.github.com/articles/about-pull-requests/)
+för mer information om hur du skickar pull-förfrågningar.
 
 <!--
 Lastly, please follow the [pull request template](PULL_REQUEST_TEMPLATE.md) when
 submitting a pull request!
 -->
 
-## Från medarbetare till committer
+## Från bidragsgivare till publicist
 
-Vi älskar bidrag från vår community! Om du vill gå ett steg längre än medverkande
-och bli en committer med fullständig skrivbehörighet och en medarbetare i projektet måste du
-bli inbjuden till projektet. Befintliga committers använder en intern nominering
-processer som måste uppnå lat samförstånd (tystnad innebär godkännande) före inbjudningar
-utfärdas. Om du känner att du är kvalificerad och vill bli djupare involverad
-Du kan kontakta befintliga committers och prata om det.
+Vi älskar bidrag från vår gemenskap! Om du vill gå ett steg längre än att bara vara bidragsgivare och bli en publicist med fullständig skrivbehörighet och ha en röst i projektet måste du bli inbjuden till projektet. Befintliga publicister använder en intern nomineringsprocess som måste uppnå lat samförstånd (tystnad innebär godkännande) innan inbjudningar utfärdas. Om du känner att du är kvalificerad och vill engagera dig mer, kontakta gärna befintliga publicister för att föra ett samtal om det.
 
 ## Säkerhetsproblem
 
-Säkerhetsproblem bör inte rapporteras i den här ärendespåraren. [skicka i stället ett problem till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html)
+Säkerhetsproblem bör inte rapporteras i den här ärendespåraren. I stället [skicka ett problem till våra säkerhetsexperter](https://helpx.adobe.com/security/alertus.html)
