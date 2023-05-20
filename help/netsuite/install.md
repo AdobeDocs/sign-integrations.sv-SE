@@ -11,7 +11,7 @@ exl-id: 378cac01-87c9-4288-8839-482121d49402
 source-git-commit: 568d001a05bd0e642036b4a73067689e987c02ba
 workflow-type: tm+mt
 source-wordcount: '4870'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -72,7 +72,7 @@ Se [Skapa ett Adobe Sign-avtal](#createagreement) för mer information om testni
 
 Adobe Sign använder OAuth 2.0 för att autentisera ditt Adobe Sign-konto inom [!DNL NetSuite].
 
-Detta protokoll godkänner din installerade [!DNL NetSuite] paket för att kommunicera med Adobe Sign utan att begära ditt lösenord. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto utsätts för risker.
+Detta protokoll godkänner din installerade [!DNL NetSuite] paket för att kommunicera med Adobe Sign utan att begära ditt lösenord. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto äventyras.
 
 Den här autentiseringen påverkar inte implementeringen, men du måste göra en engångskonfiguration efter att ha installerat eller uppgraderat paketet i ditt konto för produktion eller sandlåda.
 
@@ -261,7 +261,7 @@ Om avtalet skapas från en transaktionspost är det första dokumentet i avtalsp
 
 Under Anpassade inställningar kan du även aktivera **[!UICONTROL Använd trans. Kontakt som första signerare]** inställning om du vill att den primära transaktionskontakten ska läggas till automatiskt som den första signeraren. När den associeras med en transaktionspost visas **[!UICONTROL Avtal]** och **[!UICONTROL Send for Signature]** knappar.
 
-![Citat](images/quote.png)
+![Offert](images/quote.png)
 
 ## Enhetsposter {#entity-records}
 
@@ -550,7 +550,7 @@ När du har skickat ett avtal:
    * **Skicka påminnelse** — Skicka en påminnelse till den aktuella signeraren.
    * **Avbryt avtal** — Avbryta ett avtal. Ett avtal kan avbrytas efter att det har skickats för en signatur om alla mottagare ännu inte har signerat.
 
-![Skickat för signatur](images/out-for-signature.png)
+![Skickat för signering](images/out-for-signature.png)
 
 En ny *Händelser* underfliken visas i avtalsposten där du kan spåra avtalets status.
 
@@ -647,4 +647,4 @@ Du kan även visa körningsloggar för distribution för skript som inte är rel
 
 ## Support {#support}
 
-Gå till [Adobe Sign supportportal](https://adobe.com/go/adobesign-support-center_se) få åtkomst till vanliga frågor, dokumentation och artiklar i kunskapsbasen eller kontakta Adobe Support.
+Gå till [Adobe Sign supportportal](https://adobe.com/go/adobesign-support-center) få åtkomst till vanliga frågor, dokumentation och artiklar i kunskapsbasen eller kontakta Adobe Support.

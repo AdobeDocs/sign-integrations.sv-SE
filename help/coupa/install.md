@@ -12,14 +12,14 @@ topic: Integrations
 exl-id: 12c91be5-afec-4918-a8fc-ceb33bedf98b
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '823'
-ht-degree: 7%
+source-wordcount: '819'
+ht-degree: 0%
 
 ---
 
 # [!DNL Coupa] Installationshandbok{#coupa-installation-guide}
 
-[**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Sign Support**](https://adobe.com/go/adobesign-support-center)
 
 ## Översikt {#overview}
 
@@ -84,14 +84,14 @@ När du har skapat en grupp och en användare i den gruppen måste du göra anv�
 
 Så här befordrar du den nya användaren i [!DNL Coupa BSM Suite] grupp:
 
-1. Navigera till sidan [!UICONTROL Användare] (om du inte redan är där).
+1. Gå till [!UICONTROL Användare] sidan (om den inte redan finns).
 2. Dubbelklicka på användaren.
 
    Det öppnar en [!UICONTROL Redigera] för användarbehörigheterna.
 
 3. Under avsnittet Gruppmedlemskap väljer du **[!UICONTROL Gruppadministratör]** och **[!UICONTROL Kan skicka]** alternativ.
 4. Avmarkera **[!UICONTROL Användaren är kontoadministratör]** och **[!UICONTROL Användare kan signera dokument]** alternativ.
-5. Klicka på **[!UICONTROL Spara]**.
+5. Klicka **[!UICONTROL Spara]**.
 
    ![Bild av användarinställningar](images/user-settings.png)
 
@@ -104,7 +104,7 @@ Så här konfigurerar du [!DNL Coupa BSM Suite]:
 1. Anslut din [!DNL Coupa BSM Suite] till ditt Adobe Sign-tjänstkonto som du skapade ovan.
 1. Skapa en Adobe Sign-webhookinstans för att meddela din Coupa BSM Suite-instans om avtalsuppdateringar.
 
-Mer information om hur du ansluter [!DNL Coupa BSM Suite] och hur du skapar och registrerar en webhook, se [Adobe Sign Coupa BSM Suite Instanssupportdokumentation](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target=&quot;_blank&quot;}.
+Mer information om hur du ansluter [!DNL Coupa BSM Suite] och hur du skapar och registrerar en webhook, se [Adobe Sign Coupa BSM Suite Instanssupportdokumentation](https://success.coupa.com/Support/Docs/Power_Apps/CLM_Standard/Signing_and_Approvals/Enable_E-Signatures_Through_Adobe_Sign_and_DocuSign){target="_blank"}.
 
 ## Skapa [!DNL Webhook] i Adobe Sign {#create-webhook}
 
@@ -136,7 +136,7 @@ Så här skapar du en webhook i Adobe Sign:
 
 [!DNL Coupa BSM Suite ] är integreringsägaren och bör vara din första kontaktpunkt för frågor om omfattningen av integreringen, funktionsförfrågningar eller problem i den dagliga funktionen av integreringen.
 
-För frågor, kontakta [Stöd för kupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target=&quot;_blank&quot;}.
+För frågor, kontakta [Stöd för kupa](https://success.coupa.com/Support/Welcome_to_Coupa_Support){target="_blank"}.
 
 ### Stöd för Adobe Sign {#adobe-sign-support}
 

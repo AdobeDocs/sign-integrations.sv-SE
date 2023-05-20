@@ -9,7 +9,7 @@ exl-id: 6317723e-447a-4506-a621-4d967bdd6561
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '849'
-ht-degree: 5%
+ht-degree: 0%
 
 ---
 
@@ -56,7 +56,7 @@ Du ser nu Adobe Document Cloud eSign-tjänster (eller Adobe eSign-tjänster i ko
 
 **Implementerat förbättrat skydd med OAuth**
 
-För att förbättra datasäkerheten använder eSign-tjänsterna nu OAuth 2.0 för att autentisera ditt Adobe Document Cloud eSign-tjänstkonto i NetSuite. Med det nya protokollet kan NetSuite kommunicera med eSign-tjänster utan att begära ditt lösenord för eSign-tjänsterna. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto utsätts för risker. Den här förbättringen påverkar inte implementeringen, men du måste göra en engångskonfiguration för att godkänna NetSuite-paketet för kommunikation med Adobe Document Cloud. Detta görs under installationen. För kunder som uppgraderar från en tidigare version av paketet - v3.5.9 och tidigare - ersätts den tidigare använda API-nyckeln med en OAuth-token som genereras under auktoriseringsprocessen.
+För att förbättra datasäkerheten använder eSign-tjänsterna nu OAuth 2.0 för att autentisera ditt Adobe Document Cloud eSign-tjänstkonto i NetSuite. Med det nya protokollet kan NetSuite kommunicera med eSign-tjänster utan att begära ditt lösenord för eSign-tjänsterna. Eftersom känslig information inte delas direkt mellan programmen är det mindre troligt att ditt konto äventyras. Den här förbättringen påverkar inte implementeringen, men du måste göra en engångskonfiguration för att godkänna NetSuite-paketet för kommunikation med Adobe Document Cloud. Detta görs under installationsprocessen. För kunder som uppgraderar från en tidigare version av paketet - v3.5.9 och tidigare - ersätts den tidigare använda API-nyckeln med en OAuth-token som genereras under auktoriseringsprocessen.
 
 **Migrerade eSign-tjänsterna från SOAP API:er till REST API:er**
 
@@ -111,7 +111,7 @@ Du kan välja filer att bifoga från den aktuella transaktionen med den nya list
 * Alla PDF-filer som skickas eller hämtas från EchoSign är certifierade med ett digitalt Adobe EchoSign-certifikat
 * Acrobat eller Reader har en certifiering som garanterar att dokumentet inte har manipulerats för att ge ytterligare förtroende och sinnesro
 
-**Samla in stöttande dokument**
+**Samla in stöddokument**
 
 * Avsändare kan samla in ytterligare stöddokument från signerare under signeringen, till exempel ett körkort, ett affärscertifikat med mera.
 * Insamlade dokument blir en del av det signerade avtalets officiella protokoll
@@ -123,7 +123,7 @@ Du kan välja filer att bifoga från den aktuella transaktionen med den nya list
 * Villkoren kan definieras med dra-och-släpp-gränssnittet eller med texttaggar
 * Signeraren visas med lämpliga fält när ett dokument signeras baserat på de!ned-villkoren
 
-**Förbättringar med ytterligare EchoSign-formulärfält**
+**Ytterligare förbättringar av EchoSign-formulärfält**
 
 * Listrutor
 * Fältmaskering

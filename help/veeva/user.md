@@ -12,13 +12,13 @@ exl-id: 39a43637-af3f-432e-a784-8f472aa86df5
 source-git-commit: c164692d78608c436d136caef44b19fe8d37b9d8
 workflow-type: tm+mt
 source-wordcount: '721'
-ht-degree: 2%
+ht-degree: 0%
 
 ---
 
 # Adobe Acrobat Sign för [!DNL Veeva Vault]: Användarhandbok {#veeva-vault-user-guide}
 
-[**Kontakta Adobe Acrobat Sign Support**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Acrobat Sign Support**](https://adobe.com/go/adobesign-support-center)
 
 Det här dokumentet är utformat för att hjälpa dig [!DNL Veeva Vault] kan du lära dig använda Adobe Acrobat Sign för [!DNL Veeva Vault] integration för att skicka ett avtal.
 
@@ -33,7 +33,7 @@ Adobe Acrobat Sign-integrering med [!DNL Veeva Vault] effektiviserar och snabbar
 * Spara tid och resurser på snigelmejl, övernattning och fax.
 * Skicka kontrakt för e-signering eller godkännande från [!DNL Veeva Vault], få åtkomst till kontraktshistorik i realtid och visa sparade kontrakt.
 * Spåra erbjudandena i realtid i hela organisationen och få uppdateringar när avtal visas, signeras, avbryts eller avvisas.
-* eSign på över 20 språk och stöd för faxtjänster på 50+ platser runt hela jorden.
+* eSign på över 20 språk och stöd för fax-back på över 50 platser världen över.
 * Skapa återanvändbara avtalsmallar för sändningsalternativ.
 
 ## Skicka ett avtal med Adobe Acrobat Sign för [!DNL Veeva Vault] {#send-sign-vault-agreement}

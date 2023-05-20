@@ -1,6 +1,6 @@
 ---
 title: Installationshandbok för Workday
-description: Installationshandbok för att aktivera Adobe Sign-integrering med Workday
+description: Installationsguide för att aktivera Adobe Sign-integrering med Workday
 uuid: 56478222-fe66-4fa5-aac3-0ecdf2863197
 product: Adobe Sign
 topic-tags: EchoSign/Integrations
@@ -14,14 +14,14 @@ topic: Integrations
 exl-id: 8f12b524-2123-45d4-98d5-b2b23580a5ea
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 25%
+source-wordcount: '1131'
+ht-degree: 0%
 
 ---
 
 # [!DNL Workday] Installationshandbok{#workday-installation-guide}
 
-[**Kontakta supporten för Adobe Sign**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Sign Support**](https://adobe.com/go/adobesign-support-center)
 
 ## Översikt {#overview}
 
@@ -47,7 +47,7 @@ Om du inte har använt Adobe Sign tidigare och inte redan har loggat in tillhand
 
 Du måste följa anvisningarna i e-postmeddelandet för att initiera ditt konto och få åtkomst till ditt Adobe Sign [!UICONTROL Startsida] sidan.
 
-![Sidan för kontrollpanelen i Adobe Sign](images/classic-home.png)
+![Sidan Adobe Sign Dashboard](images/classic-home.png)
 
 ## Konfigurera Adobe Sign för [!DNL Workday] {#config}
 
@@ -70,13 +70,13 @@ Så här skapar du en användare i Adobe Sign:
 1. Ange information om den nya användaren i dialogrutan som öppnas:
 
    * Ange en fungerande e-postadress som du kan komma åt.
-   * Ange ett för- och efternamn.
+   * Ange ett lämpligt värde för för- och efternamn.
    * Välj **[!UICONTROL Skapa en ny grupp för den här användaren]** från användargruppen.
    * Ge **[!UICONTROL Nytt gruppnamn]** med ett intuitivt namn som *[!DNL Workday]*.
 
    ![Panelen Skapa en användare](images/create-user.png)
 
-1. Klicka på **[!UICONTROL Spara]**.
+1. Klicka **[!UICONTROL Spara]**.
 
    Det för dig tillbaka till [!UICONTROL Användare] sida som visar den nya användaren med en **[!UICONTROL SKAPAD]** status.
 
@@ -97,13 +97,13 @@ När du har verifierat e-postadressen ändras statusen för användaren från [!
 
 Så här befordrar du den nya användaren i [!DNL Workday] grupp:
 
-1. Navigera till sidan [!UICONTROL Användare] (om du inte redan är där).
+1. Gå till [!UICONTROL Användare] sidan (om den inte redan finns).
 2. Dubbelklicka på användaren i [!DNL Workday] grupp.
 
    Detta öppnar en [!UICONTROL Redigera] för användarbehörigheterna.
 
 3. Kontrollera **[!UICONTROL Gruppadministratör]**.
-4. Klicka på **[!UICONTROL Spara]**.
+4. Klicka **[!UICONTROL Spara]**.
 
 ![](images/user-permissions-edit1-575.png)
 
@@ -115,11 +115,11 @@ Så här slutför du anslutningen mellan [!DNL Workday] klientorganisation och A
 >
 >Adobe Sign varumärkesmarkeras som Adobe Document Cloud i hela [!DNL Workday] miljön.
 
-Så här skapar du den betrodda relationen:
+Så här upprättar du den betrodda relationen:
 
 1. Logga in på [!DNL Workday] som kontoadministratör.
 1. Öppna **[!UICONTROL Redigera klientinställning - Affärsprocesser]** sidan.
-1. Gå till sektionen [!UICONTROL Konfiguration av e-signatur]:
+1. Leta reda på [!UICONTROL Konfiguration av e-signatur] avsnitt:
 
    ![](images/esignature_configurations.png)
 
@@ -144,17 +144,17 @@ Dokumentet för steget Granska dokument kan vara något av följande:
 * Ett dokument som genereras av steget Generera dokument i samma affärsprocess
 * En formaterad rapport som skapats med [!DNL Workday] Rapportdesigner
 
-Du kan lägga till dessa dokument med [Adobe-texttaggar](https://adobe.com/go/adobesign_text_tag_guide_se) för att styra utseendet och placeringen av Adobe Signing-specifika komponenter. Dokumentkällan måste anges i definitionen för affärsprocessen. Det går inte att överföra ett adhoc-dokument medan affärsprocessen utförs.
+Du kan lägga till dessa dokument med [Adobe-texttaggar](https://adobe.com/go/adobesign_text_tag_guide) för att styra utseendet och placeringen av Adobe Signing-specifika komponenter. Dokumentkällan måste anges i affärsprocessdefinitionen. Det går inte att överföra ett ad hoc-dokument medan affärsprocessen körs.
 
-Det enda sättet att använda Adobe Sign med steget Granska dokument är möjligheten att ha serialiserade signerargrupper. Detta gör att du kan använda rollbaserade grupper som signerar efter varandra. Adobe Sign stöder inte parallella signeringsgrupper.
+Det enda sättet att använda Adobe Sign med steget Granska dokument är möjligheten att ha serialiserade signerargrupper. Detta gör att du kan ange rollbaserade grupper som loggar in efter varandra. Adobe Sign stöder inte parallella signeringsgrupper.
 
-Om du behöver hjälp med att konfigurera steget Granska dokument ska du gå till [Snabbstartsguide](https://adobe.com//go/adobesign_workday_quick_start){target=&quot;_blank&quot;}.
+Om du behöver hjälp med att konfigurera steget Granska dokument ska du gå till [Snabbstartsguide](https://adobe.com//go/adobesign_workday_quick_start){target="_blank"}.
 
 ## Support {#support}
 
 ### [!DNL Workday] bära {#workday-support}
 
-[!DNL Workday] är integreringsägaren och bör vara den första kontaktpunkten för eventuella frågor om omfattningen av integreringen, funktioner eller problem med det dagliga integreringsarbetet.
+[!DNL Workday] är integreringsägaren och bör vara din första kontaktpunkt för frågor om omfattningen av integreringen, funktionsförfrågningar eller problem med den dagliga funktionen i integreringen.
 
 Du kan läsa följande [!DNL Workday] användarforum om hur man felsöker integreringen och genererar dokument:
 
@@ -165,9 +165,9 @@ Du kan läsa följande [!DNL Workday] användarforum om hur man felsöker integr
 
 ### Stöd för Adobe Sign {#adobe-sign-support}
 
-Adobe Sign är integreringspartnern och ska kontaktas om integreringen inte kan hämta signaturer eller om meddelanden med väntande signeringar misslyckas.
+Adobe Sign är integrationspartnern och bör kontaktas om integreringen inte kan hämta signaturer eller om meddelanden om väntande signaturer misslyckas.
 
-Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för att be om hjälp. Det går även att ringa till Adobes tekniska support på 1-866-318-4100, vänta på produktlistan och sedan ange 4 sedan ange 2 (enligt anvisningarna).
+Adobe Sign-kunder bör kontakta sin Customer Success Manager (CSM) för support. Du kan även nå Adobe tekniska support via telefon: 1-866-318-4100, vänta på produktlistan och ange sedan: 4 och sedan 2 (enligt anvisning).
 
 * [Lägga till Adobe-texttaggar i dokument](https://adobe.com/go/adobesign_text_tag_guide)
 * [Granska dokumentkonfiguration och exempel](https://www.adobe.com//go/adobesign_workday_quick_start)

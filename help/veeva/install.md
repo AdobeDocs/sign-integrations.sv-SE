@@ -13,13 +13,13 @@ exl-id: 5d61a428-06e4-413b-868a-da296532c964
 source-git-commit: 76f1be575130e89d96dfe45f7343382b3a519903
 workflow-type: tm+mt
 source-wordcount: '4171'
-ht-degree: 3%
+ht-degree: 0%
 
 ---
 
 # [!DNL Veeva Vault] Installationshandbok{#veeva-installation-guide}
 
-[**Kontakta Adobe Acrobat Sign Support**](https://adobe.com/go/adobesign-support-center_se)
+[**Kontakta Adobe Acrobat Sign Support**](https://adobe.com/go/adobesign-support-center)
 
 ## Översikt {#overview}
 
@@ -77,7 +77,7 @@ Signaturobjekt skapas för att lagra avtalsrelaterad information. Ett signaturob
 
 **Fält för signaturobjekt**
 
-| Fält | Etikett | Typ | Beskrivning |
+| Fält | Etikett | Text | Beskrivning |
 |:---|:---|:---|:------- | 
 | external_id__c | Avtals-ID | Sträng (100) | Innehåller Adobe Acrobat Sign unika avtals-ID |
 | file_hash__c | Filhash | Sträng (50) | Innehåller md5-kontrollsumman för filen som har skickats till Adobe Acrobat Sign |
@@ -100,14 +100,14 @@ Signeringsobjekt skapas för att lagra information relaterad till deltagarna i e
 
 **Fält för signeringsobjekt**
 
-| Fält | Etikett | Typ | Beskrivning |
+| Fält | Etikett | Text | Beskrivning |
 |:---|:---|:---|:------- | 
 | email__c | E-post | Sträng (120) | Innehåller Adobe Acrobat Sign unika avtals-ID |
 | external_id__c | Deltagar-ID | Sträng (80) | Innehåller Adobe Acrobat Sign unika deltagares identifierare |
 | name__v | Namn | Sträng (128) | Innehåller Adobe Acrobat Sign-deltagarens namn |
 | order__c | Ordning | Nummer | Innehåller Adobe Acrobat Sign-avtalsdeltagarens ordernummer |
 | role__c | Roll | Sträng (30) | Innehåller Adobe Acrobat Sign-avtalsdeltagarens roll |
-| signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
+| signature__c | Underskrift | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
 | signature_status__c | Signaturstatus | Sträng (100) | Innehåller status för Adobe Acrobat Sign-avtalsdeltagare |
 | user__c | Användare | Objekt (användare) | Innehåller referensen till undertecknarens användarpost om deltagaren är en vaultanvändare |
 
@@ -119,18 +119,18 @@ Signaturhändelseobjektet skapas för att lagra ett avtals händelserelaterad in
 
 Fält för signaturhändelseobjekt
 
-| Fält | Etikett | Typ | Beskrivning |
+| Fält | Etikett | Text | Beskrivning |
 |:---|:---|:---|:-------- | 
-| acting_user_email__c | E-post för agerande användare | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade händelsen |
+| acting_user_email__c | Användarens e-postadress | Sträng | Innehåller e-postadressen till den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade händelsen |
 | acting_user_name__c | Tillförordnat användarnamn | Sträng | Innehåller namnet på den Adobe Acrobat Sign-användare som utförde åtgärden som orsakade att händelsen skapades |
 | description__c | Beskrivning | Sträng | Innehåller beskrivningen av Adobe Acrobat Sign-händelsen |
 | event_date__c | Händelsedatum | DatumTid | Innehåller datum och klockslag för Adobe Acrobat Sign-händelsen |
 | event_type__c | Händelsetyp | Sträng | Innehåller Adobe Acrobat Sign-händelsens typ |
 | name__v | Namn | Sträng | Namn på automatiskt genererad händelse |
 | participant_comment__c | Deltagarkommentar | Sträng | Innehåller eventuella kommentarer från Adobe Acrobat Sign-deltagaren |
-| participant_email__c | E-post till deltagare | Sträng | Innehåller Adobe Acrobat Sign-deltagarens e-postadress |
+| participant_email__c | Deltagarens e-postadress | Sträng | Innehåller Adobe Acrobat Sign-deltagarens e-postadress |
 | participant_role__c | Deltagarroll | Sträng | Innehar Adobe Acrobat Sign-deltagarens roll |
-| signature__c | Signatur | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
+| signature__c | Underskrift | Objekt (signatur) | Innehåller referensen till den överordnade signaturposten |
 | external_id__c | Externt ID | Text (200) | Innehåller avtalshändelse-ID som genererats av Adobe Sign. |
 
 ![Bild](images/signature-event-object-details.png)
@@ -149,7 +149,7 @@ AgreementsEventsProcessingJob: Den här uppgiften ser till att alla dokument med
 
 Objektfält för Adobe Sign-integreringsuppgiftslogg
 
-| Fält | Etikett | Typ | Beskrivning |
+| Fält | Etikett | Text | Beskrivning |
 |:--|:--|:--|:---------| 
 | start_date__c | Startdatum | DatumTid | Aktivitetens startdatum |
 | end_date__c | Slutdatum | DatumTid | Aktivitetens slutdatum |
@@ -350,8 +350,8 @@ Livscykeln för Adobe Acrobat Sign-avtal har följande tillstånd:
 * AUTHORING eller DOCUMENTS_NOT_YET_PROCESSED
 * OUT_FOR_SIGNATURE eller OUT_FOR_APPROVAL
 * SIGNERAT eller GODKÄNT
-* AVBRUTEN
-* FÖRFALLEN
+* AVBRUTET
+* UTGÅNGET
 
 Följ stegen nedan för att uppdatera dokumentets livscykel:
 

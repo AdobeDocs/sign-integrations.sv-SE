@@ -11,7 +11,7 @@ exl-id: c1f22848-7951-4066-84d4-f8cf6c2f3a6f
 source-git-commit: 4d73ff36408283805386bd3266b683bc187d6031
 workflow-type: tm+mt
 source-wordcount: '530'
-ht-degree: 40%
+ht-degree: 0%
 
 ---
 
@@ -21,7 +21,7 @@ Adobe Sign versionskonvention och supportlivscykel för integreringstjänster ä
 
 ## Versionsnummer
 
-Paketversionen använder ett tredelat numreringssystem för att identifiera serienumret för den lanserade versionen och uppgraderingens relativa vikt i form av nytt eller ändrat innehåll.
+Paketversionen använder ett tredelat numreringssystem för att identifiera serienumret för den lanserade versionen och den relativa importen av uppgraderingen i form av nytt eller ändrat innehåll.
 
 Versionsnumret följer det här mönstret: N.m.p
 
@@ -37,7 +37,7 @@ När teknikerna utvecklar nya &quot;builds&quot; av paketet ökar de versionsnum
 
 * Större versionsändringar innebär ett betydande tillägg av funktioner eller en viktig förändring av kärnsystemen.
 * Delversionsuppdateringar omfattar mindre funktionsuppdateringar och säkerhetsuppdateringar. Adobe Sign kan behöva en uppgradering till den senaste korrigerade versionen om det finns säkerhetsuppdateringar eller för att åtgärda ett rapporterat objekt.
-* Korrigerade versioner är nästan uteslutande buggkorrigeringar och gränssnittsjusteringar
+* Korrigeringsversioner är nästan uteslutande buggkorrigeringar och gränssnittsjusteringar
 
 >[!NOTE]
 >
@@ -52,7 +52,7 @@ Versionsstödet för livscykeln för en Adobe Sign-integrationsprodukt definiera
 Adobe Sign stöder den aktuella paketversionen och de två tidigare huvudversionerna (inklusive alla relaterade delversioner och korrigeringsuppdateringar). Huvudversionerna uttrycks enligt följande:
 
 * Aktuell version (N): Den senaste huvudversionen av paketet
-* Tidigare version (N-1): En huvudversion bakom den senaste versionen
+* Föregående version (N-1): En huvudversion bakom den senaste versionen
 * Senaste version som stöds (N-2): Två huvudversioner bakom den aktuella versionen
 
 Om den aktuella tillgängliga versionen av paketet till exempel är 23.2.1 så gäller följande:
@@ -60,19 +60,19 @@ Om den aktuella tillgängliga versionen av paketet till exempel är 23.2.1 så g
 * Aktuell huvudversion (N) är 23
 * Tidigare huvudversion (N-1) av detta paket är 22
 * Senaste huvudversion som stöds (N-2) av det här paketet är 21
-* Inga versioner som är äldre än 21.0.0 stöds
+* Alla versioner äldre än 21.0.0 stöds inte
 
 ![Versionsdiagram](images/version_chart.png)
 
 ## Versionstjänstens livscykel
 
-Versionstjänstens livscykel definierar det fullständiga omfånget för när tjänsten kan användas. Tidslinjen matchar versionsstödet för livscykeln med en 90-dagars respitperiod som tillåter att kunderna slutför uppgraderingen.
+Versionstjänstens livscykel definierar det fullständiga omfånget för när tjänsten kan användas. Tidslinjen matchar versionsstödet för livscykeln med en 90-dagars respitperiod som gör att kunderna kan slutföra uppgraderingen.
 
 * Under en respitperiod för en version som inte stöds ges endast support för att uppgradera till en nyare version, inte för att behålla en version som inte stöds
 * Efter respitperioden slutar versionen att fungera
 
-* Adobe Sign kommer inte att acceptera förfrågningar från versioner som är avstängda
-* När integreringen har uppgraderats till den aktuella versionen kommer kommunikationen mellan Adobe Sign och integreringen att återupptas normalt
+* Adobe Sign kommer inte att acceptera begäranden från versioner som är avstängda
+* När integreringen har uppgraderats till den nuvarande versionen återupptas kommunikationen mellan Adobe Sign och integreringen normalt
 
 ![Avstängningsperiod](images/shutdown_period.png)
 
